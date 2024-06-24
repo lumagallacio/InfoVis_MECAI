@@ -1,0 +1,3657 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_a7352adc8cf7260d2c3deac39ff8237f {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+    <script src="https://cdn.jsdelivr.net/gh/python-visualization/folium@main/folium/templates/leaflet_heat.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_a7352adc8cf7260d2c3deac39ff8237f" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_a7352adc8cf7260d2c3deac39ff8237f = L.map(
+                "map_a7352adc8cf7260d2c3deac39ff8237f",
+                {
+                    center: [-21.1775, -47.8103],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 12,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_cf2df827605114ba53512a49b4f07389 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_cf2df827605114ba53512a49b4f07389.addTo(map_a7352adc8cf7260d2c3deac39ff8237f);
+        
+    
+            var heat_map_f55ba2f4386bcde17226a616dc4f969f = L.heatLayer(
+                [[-21.175022414, -47.811265519], [-21.1824408, -47.8083188], [-21.1755812719999, -47.810502573], [-21.1755812719999, -47.810502573], [-21.193881916, -47.799190758], [-21.193881916, -47.799190758], [-21.193881916, -47.799190758], [-21.1781601, -47.806978], [-21.182414543625, -47.8087816759791], [-21.1755698667346, -47.8105181433265], [-21.1760179382916, -47.8099232932916], [-21.169422412, -47.8110213579999], [-21.138687316, -47.786961774], [-21.1610758, -47.797206], [-21.1181834828709, -47.7813992227096], [-21.1733380539999, -47.813508887], [-21.087950242, -47.799043201], [-21.1690544101199, -47.82406055544], [-21.1408893478, -47.8425438955428], [-21.1541345208717, -47.8217576188205], [0.0, 0.0], [0.0, 0.0], [-21.2112566090908, -47.8178771272727], [0.0, 0.0], [-21.1435643479999, -47.817475799], [-21.1435643479999, -47.817475799], [-21.1435643479999, -47.817475799], [-21.1435643479999, -47.817475799], [-21.140271297, -47.816619383], [-21.2008219472909, -47.8406384484545], [-21.1931934759999, -47.8337514890714], [-21.1996798916756, -47.8362486595945], [-21.1963759, -47.7726031], [-21.1963759, -47.7726031], [-21.16080257286, -47.73804245524], [-21.1771975, -47.8067633], [-21.17104939, -47.810227899], [-21.17104939, -47.810227899], [-21.1770232439999, -47.8069625099999], [-21.1768428487693, -47.8064110808739], [-21.1932869838333, -47.7998147144999], [-21.161012902, -47.800443091], [-21.169422412, -47.8110213579999], [-21.169422412, -47.8110213579999], [-21.154318066, -47.803681776], [-21.1585967, -47.7983795], [-21.1580448085952, -47.8068655412619], [-21.1670181, -47.8074329], [-21.1740801, -47.8139786], [-21.1694529019999, -47.821847557], [-21.1694529019999, -47.821847557], [-21.1710331, -47.823347], [-21.1502616, -47.8266883875714], [-21.1581847977222, -47.8280461376388], [-21.1317489749302, -47.8514680953953], [-21.1889238979999, -47.807711345], [-21.202978929, -47.767955479], [-21.2171339509999, -47.792580758], [-21.2171339509999, -47.792580758], [-21.08380894, -47.801847891], [-21.08380894, -47.801847891], [-21.08380894, -47.801847891], [-21.08380894, -47.801847891], [-21.08380894, -47.801847891], [-21.08380894, -47.801847891], [-21.08380894, -47.801847891], [-21.08380894, -47.801847891], [-21.1325558, -47.8040999], [-21.2040449899999, -47.8520146719999], [-21.1906010609714, -47.7694874275428], [-21.2017755816689, -47.762517395277], [0.0, 0.0], [-21.1664670549868, -47.8128859315263], [-21.169711189375, -47.7922075965], [-21.1751940070626, -47.7967964883231], [-21.1349664, -47.8375941], [-21.1349664, -47.8375941], [-21.172624777, -47.8438928799999], [-21.1393904207948, -47.8525950018718], [0.0, 0.0], [-21.202978929, -47.767955479], [-21.202978929, -47.767955479], [-21.116901479, -47.786446719], [-21.138347702, -47.825891074], [0.0, 0.0], [0.0, 0.0], [-21.23559533, -47.8389867929999], [-21.17395621, -47.8077521499999], [-21.17395621, -47.8077521499999], [-21.17104939, -47.810227899], [-21.1781601, -47.806978], [0.0, 0.0], [-21.1808482, -47.8111606], [-21.1808482, -47.8111606], [-21.1808482, -47.8111606], [-21.1808482, -47.8111606], [-21.165944892, -47.812412203], [-21.13400667, -47.783547578], [-21.161675, -47.8010094], [-21.161675, -47.8010094], [-21.135771012, -47.770024373], [-21.135771012, -47.770024373], [-21.1625025559999, -47.7970022119999], [0.0, 0.0], [0.0, 0.0], [-21.168660024409, -47.7981946792273], [-21.1603748, -47.7981292], [-21.1551184863191, -47.7966314305957], [0.0, 0.0], [0.0, 0.0], [-21.17248377872, -47.81818939504], [-21.176609325, -47.8152442849999], [-21.1566545049999, -47.831933659], [0.0, 0.0], [0.0, 0.0], [-21.209245, -47.809508], [-21.202978929, -47.767955479], [-21.1545417257358, -47.8192463709433], [-21.1251425448277, -47.8258255292694], [-21.1251425448277, -47.8258255292694], [-21.1251425448277, -47.8258255292694], [-21.1297078857894, -47.8216795871578], [-21.1413832, -47.8302019], [-21.1413832, -47.8302019], [-21.2352827, -47.8385631], [-21.1936807509999, -47.757214613], [0.0, 0.0], [-21.1707997, -47.7219447], [-21.1707997, -47.7219447], [-21.1707997, -47.7219447], [-21.1983857769999, -47.759068664], [-21.1751066783076, -47.7934903525384]],
+                {"blur": 15, "maxZoom": 18, "minOpacity": 0.5, "radius": 25}
+            );
+        
+    
+            heat_map_f55ba2f4386bcde17226a616dc4f969f.addTo(map_a7352adc8cf7260d2c3deac39ff8237f);
+        
+    
+            var marker_cluster_41274af0c87c2f199fc00b84638f1101 = L.markerClusterGroup(
+                {}
+            );
+        
+    
+            var marker_04a22da9209a456c469db4cec00f2fb5 = L.marker(
+                [-21.175022414, -47.811265519],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_055aae7fb192111b0425d330c540ff0e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_04a22da9209a456c469db4cec00f2fb5.setIcon(icon_055aae7fb192111b0425d330c540ff0e);
+        
+    
+        var popup_271dd6e476acf273486ce2089692bc9f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_880d995dbe111765a246b08868f53e7c = $(`<div id="html_880d995dbe111765a246b08868f53e7c" style="width: 100.0%; height: 100.0%;">Tipo de Local: Via Pública<br>Data: 2024-01-25 00:00:00<br>Lat: -21.175022414<br>Lng: -47.811265519</div>`)[0];
+                popup_271dd6e476acf273486ce2089692bc9f.setContent(html_880d995dbe111765a246b08868f53e7c);
+            
+        
+
+        marker_04a22da9209a456c469db4cec00f2fb5.bindPopup(popup_271dd6e476acf273486ce2089692bc9f)
+        ;
+
+        
+    
+    
+            var marker_8933267381f1734e031d44abf5829aee = L.marker(
+                [-21.1824408, -47.8083188],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_4d78ef1acf033d44218e77304a3dbd2f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_8933267381f1734e031d44abf5829aee.setIcon(icon_4d78ef1acf033d44218e77304a3dbd2f);
+        
+    
+        var popup_9c216fb83c7017eed1356e413ed8f9e0 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0d52c5cc689ac5e6251f00e64aa5cda3 = $(`<div id="html_0d52c5cc689ac5e6251f00e64aa5cda3" style="width: 100.0%; height: 100.0%;">Tipo de Local: Restaurante e Afins<br>Data: 2024-01-26 00:00:00<br>Lat: -21.1824408<br>Lng: -47.8083188</div>`)[0];
+                popup_9c216fb83c7017eed1356e413ed8f9e0.setContent(html_0d52c5cc689ac5e6251f00e64aa5cda3);
+            
+        
+
+        marker_8933267381f1734e031d44abf5829aee.bindPopup(popup_9c216fb83c7017eed1356e413ed8f9e0)
+        ;
+
+        
+    
+    
+            var marker_29ceae1b903155b570bec1353b268f83 = L.marker(
+                [-21.1755812719999, -47.810502573],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_37363cca3e4313b48ef1ab66ab454893 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_29ceae1b903155b570bec1353b268f83.setIcon(icon_37363cca3e4313b48ef1ab66ab454893);
+        
+    
+        var popup_6985aa3d9281c11439f93bfd63d8586a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0af21be627f90f9e2b7fc293481aff5f = $(`<div id="html_0af21be627f90f9e2b7fc293481aff5f" style="width: 100.0%; height: 100.0%;">Tipo de Local: Restaurante e Afins<br>Data: 2024-01-02 00:00:00<br>Lat: -21.1755812719999<br>Lng: -47.810502573</div>`)[0];
+                popup_6985aa3d9281c11439f93bfd63d8586a.setContent(html_0af21be627f90f9e2b7fc293481aff5f);
+            
+        
+
+        marker_29ceae1b903155b570bec1353b268f83.bindPopup(popup_6985aa3d9281c11439f93bfd63d8586a)
+        ;
+
+        
+    
+    
+            var marker_f710e801e9c3c441fc26fb4507756123 = L.marker(
+                [-21.1755812719999, -47.810502573],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_769d8d835217cab3d6e774d13e84a188 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_f710e801e9c3c441fc26fb4507756123.setIcon(icon_769d8d835217cab3d6e774d13e84a188);
+        
+    
+        var popup_713f6acf96f7cb9d8f37ebaa00eecbac = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_fd1b1634bf68d4d4e14313ea8a8dcdc7 = $(`<div id="html_fd1b1634bf68d4d4e14313ea8a8dcdc7" style="width: 100.0%; height: 100.0%;">Tipo de Local: Restaurante e Afins<br>Data: 2024-01-02 00:00:00<br>Lat: -21.1755812719999<br>Lng: -47.810502573</div>`)[0];
+                popup_713f6acf96f7cb9d8f37ebaa00eecbac.setContent(html_fd1b1634bf68d4d4e14313ea8a8dcdc7);
+            
+        
+
+        marker_f710e801e9c3c441fc26fb4507756123.bindPopup(popup_713f6acf96f7cb9d8f37ebaa00eecbac)
+        ;
+
+        
+    
+    
+            var marker_73e4dbfe347eccd12903b89145a4a674 = L.marker(
+                [-21.193881916, -47.799190758],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_41c90ae35bd7da5ba24f0b187548eb32 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_73e4dbfe347eccd12903b89145a4a674.setIcon(icon_41c90ae35bd7da5ba24f0b187548eb32);
+        
+    
+        var popup_f05a58d5bd857105c87ce1302c8aebeb = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_28d4f371288459d663d71bd36a5e61d7 = $(`<div id="html_28d4f371288459d663d71bd36a5e61d7" style="width: 100.0%; height: 100.0%;">Tipo de Local: Centro Comercial/Empresarial<br>Data: 2024-01-25 00:00:00<br>Lat: -21.193881916<br>Lng: -47.799190758</div>`)[0];
+                popup_f05a58d5bd857105c87ce1302c8aebeb.setContent(html_28d4f371288459d663d71bd36a5e61d7);
+            
+        
+
+        marker_73e4dbfe347eccd12903b89145a4a674.bindPopup(popup_f05a58d5bd857105c87ce1302c8aebeb)
+        ;
+
+        
+    
+    
+            var marker_f8756636220fa064098dbbd75365904f = L.marker(
+                [-21.193881916, -47.799190758],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_bea2dae6ee28178bf7cc3f93bb28e815 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_f8756636220fa064098dbbd75365904f.setIcon(icon_bea2dae6ee28178bf7cc3f93bb28e815);
+        
+    
+        var popup_acb4f30c4611c8d5e20eaab742ccfa09 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2cf34cfe1ee6039c39251387e0a3ee36 = $(`<div id="html_2cf34cfe1ee6039c39251387e0a3ee36" style="width: 100.0%; height: 100.0%;">Tipo de Local: Centro Comercial/Empresarial<br>Data: 2024-01-25 00:00:00<br>Lat: -21.193881916<br>Lng: -47.799190758</div>`)[0];
+                popup_acb4f30c4611c8d5e20eaab742ccfa09.setContent(html_2cf34cfe1ee6039c39251387e0a3ee36);
+            
+        
+
+        marker_f8756636220fa064098dbbd75365904f.bindPopup(popup_acb4f30c4611c8d5e20eaab742ccfa09)
+        ;
+
+        
+    
+    
+            var marker_5604b866d677904df4fb5ddf21fd68cd = L.marker(
+                [-21.193881916, -47.799190758],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_278160c9d7ec70763931c5a950ecb693 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_5604b866d677904df4fb5ddf21fd68cd.setIcon(icon_278160c9d7ec70763931c5a950ecb693);
+        
+    
+        var popup_51d097a1bbbd69db77ea125441802e92 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7e19b33b0200c789972c100bdcef5aaf = $(`<div id="html_7e19b33b0200c789972c100bdcef5aaf" style="width: 100.0%; height: 100.0%;">Tipo de Local: Centro Comercial/Empresarial<br>Data: 2024-01-25 00:00:00<br>Lat: -21.193881916<br>Lng: -47.799190758</div>`)[0];
+                popup_51d097a1bbbd69db77ea125441802e92.setContent(html_7e19b33b0200c789972c100bdcef5aaf);
+            
+        
+
+        marker_5604b866d677904df4fb5ddf21fd68cd.bindPopup(popup_51d097a1bbbd69db77ea125441802e92)
+        ;
+
+        
+    
+    
+            var marker_1510d38982cf0ff32f651b4d6cc6077f = L.marker(
+                [-21.1781601, -47.806978],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_2a665957c4f29a96f97ab69865c227b2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_1510d38982cf0ff32f651b4d6cc6077f.setIcon(icon_2a665957c4f29a96f97ab69865c227b2);
+        
+    
+        var popup_9d205d1474aa3042c5f6c9753c1ba6cb = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1df330391d6b43fd631002111e6ea09f = $(`<div id="html_1df330391d6b43fd631002111e6ea09f" style="width: 100.0%; height: 100.0%;">Tipo de Local: Via Pública<br>Data: 2024-01-29 00:00:00<br>Lat: -21.1781601<br>Lng: -47.806978</div>`)[0];
+                popup_9d205d1474aa3042c5f6c9753c1ba6cb.setContent(html_1df330391d6b43fd631002111e6ea09f);
+            
+        
+
+        marker_1510d38982cf0ff32f651b4d6cc6077f.bindPopup(popup_9d205d1474aa3042c5f6c9753c1ba6cb)
+        ;
+
+        
+    
+    
+            var marker_0f108781c29f98730bc267201b4612be = L.marker(
+                [-21.182414543625, -47.8087816759791],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_6ddd2d492b33d8e99e2aa245253f218f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_0f108781c29f98730bc267201b4612be.setIcon(icon_6ddd2d492b33d8e99e2aa245253f218f);
+        
+    
+        var popup_fa74c107c4abea08c2a53dfeb2644ddc = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7fd75038a841d6b6ac2abb9e2a33539c = $(`<div id="html_7fd75038a841d6b6ac2abb9e2a33539c" style="width: 100.0%; height: 100.0%;">Tipo de Local: Via Pública<br>Data: 2024-01-09 00:00:00<br>Lat: -21.182414543625<br>Lng: -47.8087816759791</div>`)[0];
+                popup_fa74c107c4abea08c2a53dfeb2644ddc.setContent(html_7fd75038a841d6b6ac2abb9e2a33539c);
+            
+        
+
+        marker_0f108781c29f98730bc267201b4612be.bindPopup(popup_fa74c107c4abea08c2a53dfeb2644ddc)
+        ;
+
+        
+    
+    
+            var marker_e7f4dfa2e16e8a03dda4fdead5d06c37 = L.marker(
+                [-21.1755698667346, -47.8105181433265],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_5a6c404aba7cd30fe4922a48d80bedc7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_e7f4dfa2e16e8a03dda4fdead5d06c37.setIcon(icon_5a6c404aba7cd30fe4922a48d80bedc7);
+        
+    
+        var popup_c3fbc5739110721d84c54e3c20366729 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1964bca2107318b9301a746f9774058b = $(`<div id="html_1964bca2107318b9301a746f9774058b" style="width: 100.0%; height: 100.0%;">Tipo de Local: Via Pública<br>Data: 2024-01-12 00:00:00<br>Lat: -21.1755698667346<br>Lng: -47.8105181433265</div>`)[0];
+                popup_c3fbc5739110721d84c54e3c20366729.setContent(html_1964bca2107318b9301a746f9774058b);
+            
+        
+
+        marker_e7f4dfa2e16e8a03dda4fdead5d06c37.bindPopup(popup_c3fbc5739110721d84c54e3c20366729)
+        ;
+
+        
+    
+    
+            var marker_4037581e70eacd3ac2cbc363914afc08 = L.marker(
+                [-21.1760179382916, -47.8099232932916],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_3f01e3d90a6ab25b5d2655e06f75b3d4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_4037581e70eacd3ac2cbc363914afc08.setIcon(icon_3f01e3d90a6ab25b5d2655e06f75b3d4);
+        
+    
+        var popup_7d915ef5b8a3e04b94ccf8db2b00a40c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_041d2342b7a7e650ebed69b9087f9d35 = $(`<div id="html_041d2342b7a7e650ebed69b9087f9d35" style="width: 100.0%; height: 100.0%;">Tipo de Local: Via Pública<br>Data: 2024-01-08 00:00:00<br>Lat: -21.1760179382916<br>Lng: -47.8099232932916</div>`)[0];
+                popup_7d915ef5b8a3e04b94ccf8db2b00a40c.setContent(html_041d2342b7a7e650ebed69b9087f9d35);
+            
+        
+
+        marker_4037581e70eacd3ac2cbc363914afc08.bindPopup(popup_7d915ef5b8a3e04b94ccf8db2b00a40c)
+        ;
+
+        
+    
+    
+            var marker_a184b60b638fe0e1c8a515892d4ad787 = L.marker(
+                [-21.169422412, -47.8110213579999],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_f628f6dc7104b8180f593ce20f49c7c2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_a184b60b638fe0e1c8a515892d4ad787.setIcon(icon_f628f6dc7104b8180f593ce20f49c7c2);
+        
+    
+        var popup_a06aa9911eb20dedd2a7d1a8b4f9bf5a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_14eed43a89174268fb5a262d2ae849aa = $(`<div id="html_14eed43a89174268fb5a262d2ae849aa" style="width: 100.0%; height: 100.0%;">Tipo de Local: Via Pública<br>Data: 2024-01-30 00:00:00<br>Lat: -21.169422412<br>Lng: -47.8110213579999</div>`)[0];
+                popup_a06aa9911eb20dedd2a7d1a8b4f9bf5a.setContent(html_14eed43a89174268fb5a262d2ae849aa);
+            
+        
+
+        marker_a184b60b638fe0e1c8a515892d4ad787.bindPopup(popup_a06aa9911eb20dedd2a7d1a8b4f9bf5a)
+        ;
+
+        
+    
+    
+            var marker_9ece6ea359cecae501d26e4b92d3fa6b = L.marker(
+                [-21.138687316, -47.786961774],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_fa373f15443d17a35d6a7989a3936fd0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_9ece6ea359cecae501d26e4b92d3fa6b.setIcon(icon_fa373f15443d17a35d6a7989a3936fd0);
+        
+    
+        var popup_8643e3af8a1b1d19a48ff369c7042e7b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_52b5a1e95be76a148953a412895c7402 = $(`<div id="html_52b5a1e95be76a148953a412895c7402" style="width: 100.0%; height: 100.0%;">Tipo de Local: Via Pública<br>Data: 2024-01-25 00:00:00<br>Lat: -21.138687316<br>Lng: -47.786961774</div>`)[0];
+                popup_8643e3af8a1b1d19a48ff369c7042e7b.setContent(html_52b5a1e95be76a148953a412895c7402);
+            
+        
+
+        marker_9ece6ea359cecae501d26e4b92d3fa6b.bindPopup(popup_8643e3af8a1b1d19a48ff369c7042e7b)
+        ;
+
+        
+    
+    
+            var marker_1c28fa366092f45f4c95f9ed360896ef = L.marker(
+                [-21.1610758, -47.797206],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_5b32108c9e48a30fc3efc955fe5ea4b8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_1c28fa366092f45f4c95f9ed360896ef.setIcon(icon_5b32108c9e48a30fc3efc955fe5ea4b8);
+        
+    
+        var popup_7f8034e4f29265fec66a49d7f8491c81 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_419d8132050ca7e0203de8fbae779ffe = $(`<div id="html_419d8132050ca7e0203de8fbae779ffe" style="width: 100.0%; height: 100.0%;">Tipo de Local: Via Pública<br>Data: 2024-01-02 00:00:00<br>Lat: -21.1610758<br>Lng: -47.797206</div>`)[0];
+                popup_7f8034e4f29265fec66a49d7f8491c81.setContent(html_419d8132050ca7e0203de8fbae779ffe);
+            
+        
+
+        marker_1c28fa366092f45f4c95f9ed360896ef.bindPopup(popup_7f8034e4f29265fec66a49d7f8491c81)
+        ;
+
+        
+    
+    
+            var marker_4ae9370bf71e94fc17058cb61d0d7214 = L.marker(
+                [-21.1181834828709, -47.7813992227096],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_2beba3261a1e71454c6b6950130dec7d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_4ae9370bf71e94fc17058cb61d0d7214.setIcon(icon_2beba3261a1e71454c6b6950130dec7d);
+        
+    
+        var popup_a23d03a98df63f565f31a954f53ad957 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4b6713d7d6e55a95f3b47ef5cdf91e75 = $(`<div id="html_4b6713d7d6e55a95f3b47ef5cdf91e75" style="width: 100.0%; height: 100.0%;">Tipo de Local: Via Pública<br>Data: 2024-01-03 00:00:00<br>Lat: -21.1181834828709<br>Lng: -47.7813992227096</div>`)[0];
+                popup_a23d03a98df63f565f31a954f53ad957.setContent(html_4b6713d7d6e55a95f3b47ef5cdf91e75);
+            
+        
+
+        marker_4ae9370bf71e94fc17058cb61d0d7214.bindPopup(popup_a23d03a98df63f565f31a954f53ad957)
+        ;
+
+        
+    
+    
+            var marker_57e9cb4667009ea3d76fb73841d36b16 = L.marker(
+                [-21.1733380539999, -47.813508887],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_04cf4f9c0318fa8059106eaa01cda8d8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_57e9cb4667009ea3d76fb73841d36b16.setIcon(icon_04cf4f9c0318fa8059106eaa01cda8d8);
+        
+    
+        var popup_aaa987e615c6bb666ad69a53fb4265d4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_bf8198db5c3ec9d303970b1efdca36a9 = $(`<div id="html_bf8198db5c3ec9d303970b1efdca36a9" style="width: 100.0%; height: 100.0%;">Tipo de Local: Terminal/Estação<br>Data: 2024-01-03 00:00:00<br>Lat: -21.1733380539999<br>Lng: -47.813508887</div>`)[0];
+                popup_aaa987e615c6bb666ad69a53fb4265d4.setContent(html_bf8198db5c3ec9d303970b1efdca36a9);
+            
+        
+
+        marker_57e9cb4667009ea3d76fb73841d36b16.bindPopup(popup_aaa987e615c6bb666ad69a53fb4265d4)
+        ;
+
+        
+    
+    
+            var marker_39d8db2bc09ff1ba0c10ef69c89a291e = L.marker(
+                [-21.087950242, -47.799043201],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_c16a2d7d376073cce941b5226a81e483 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_39d8db2bc09ff1ba0c10ef69c89a291e.setIcon(icon_c16a2d7d376073cce941b5226a81e483);
+        
+    
+        var popup_d46b0183eba12c8fefea2f7a589feeca = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d59a09a8f10f84e30c62c2242aa381a9 = $(`<div id="html_d59a09a8f10f84e30c62c2242aa381a9" style="width: 100.0%; height: 100.0%;">Tipo de Local: Via Pública<br>Data: 2024-01-12 00:00:00<br>Lat: -21.087950242<br>Lng: -47.799043201</div>`)[0];
+                popup_d46b0183eba12c8fefea2f7a589feeca.setContent(html_d59a09a8f10f84e30c62c2242aa381a9);
+            
+        
+
+        marker_39d8db2bc09ff1ba0c10ef69c89a291e.bindPopup(popup_d46b0183eba12c8fefea2f7a589feeca)
+        ;
+
+        
+    
+    
+            var marker_4e02d3940b2de5b1cea4e407a16f1605 = L.marker(
+                [-21.1690544101199, -47.82406055544],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_a73c5439e37af61dc7da08acbc3dc4cf = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_4e02d3940b2de5b1cea4e407a16f1605.setIcon(icon_a73c5439e37af61dc7da08acbc3dc4cf);
+        
+    
+        var popup_0f033d019ffe040a10fdd43155e2c21e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f521221a0040965d71ba2f46b4e41820 = $(`<div id="html_f521221a0040965d71ba2f46b4e41820" style="width: 100.0%; height: 100.0%;">Tipo de Local: Via Pública<br>Data: 2024-01-17 00:00:00<br>Lat: -21.1690544101199<br>Lng: -47.82406055544</div>`)[0];
+                popup_0f033d019ffe040a10fdd43155e2c21e.setContent(html_f521221a0040965d71ba2f46b4e41820);
+            
+        
+
+        marker_4e02d3940b2de5b1cea4e407a16f1605.bindPopup(popup_0f033d019ffe040a10fdd43155e2c21e)
+        ;
+
+        
+    
+    
+            var marker_531f963197eae99421dacb880d223406 = L.marker(
+                [-21.1408893478, -47.8425438955428],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_b050f1b23e254ae4b8e28c936f6e8671 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_531f963197eae99421dacb880d223406.setIcon(icon_b050f1b23e254ae4b8e28c936f6e8671);
+        
+    
+        var popup_1886d8ce77ae845d962a10eb054f0d03 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_68533e19fea6e3947c0083f1f5589d2f = $(`<div id="html_68533e19fea6e3947c0083f1f5589d2f" style="width: 100.0%; height: 100.0%;">Tipo de Local: Via Pública<br>Data: 2024-01-22 00:00:00<br>Lat: -21.1408893478<br>Lng: -47.8425438955428</div>`)[0];
+                popup_1886d8ce77ae845d962a10eb054f0d03.setContent(html_68533e19fea6e3947c0083f1f5589d2f);
+            
+        
+
+        marker_531f963197eae99421dacb880d223406.bindPopup(popup_1886d8ce77ae845d962a10eb054f0d03)
+        ;
+
+        
+    
+    
+            var marker_be03b796a1ae9cca2b342169edeae772 = L.marker(
+                [-21.1541345208717, -47.8217576188205],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_b8c04590b1b6ae543804973fd629c1ec = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_be03b796a1ae9cca2b342169edeae772.setIcon(icon_b8c04590b1b6ae543804973fd629c1ec);
+        
+    
+        var popup_33d99b8427893fdde772cf4c18d8abdd = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_163b26b6bfbec81673295ebc5efa252d = $(`<div id="html_163b26b6bfbec81673295ebc5efa252d" style="width: 100.0%; height: 100.0%;">Tipo de Local: Via Pública<br>Data: 2024-01-25 00:00:00<br>Lat: -21.1541345208717<br>Lng: -47.8217576188205</div>`)[0];
+                popup_33d99b8427893fdde772cf4c18d8abdd.setContent(html_163b26b6bfbec81673295ebc5efa252d);
+            
+        
+
+        marker_be03b796a1ae9cca2b342169edeae772.bindPopup(popup_33d99b8427893fdde772cf4c18d8abdd)
+        ;
+
+        
+    
+    
+            var marker_96ee454c0a79694ccca948338af8f062 = L.marker(
+                [0.0, 0.0],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_cb1bc101b03e77a1daca2e2d3c70ea0f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_96ee454c0a79694ccca948338af8f062.setIcon(icon_cb1bc101b03e77a1daca2e2d3c70ea0f);
+        
+    
+        var popup_931ff34902a14e128ad81942085e8142 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3240275829e8833526c29d5e0778b4b6 = $(`<div id="html_3240275829e8833526c29d5e0778b4b6" style="width: 100.0%; height: 100.0%;">Tipo de Local: Shopping Center<br>Data: 2024-01-05 00:00:00<br>Lat: 0.0<br>Lng: 0.0</div>`)[0];
+                popup_931ff34902a14e128ad81942085e8142.setContent(html_3240275829e8833526c29d5e0778b4b6);
+            
+        
+
+        marker_96ee454c0a79694ccca948338af8f062.bindPopup(popup_931ff34902a14e128ad81942085e8142)
+        ;
+
+        
+    
+    
+            var marker_5f92f71db8b0b308dd1468adbfc59eda = L.marker(
+                [0.0, 0.0],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_7036f16c4953532398cc39a5f82c9cce = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_5f92f71db8b0b308dd1468adbfc59eda.setIcon(icon_7036f16c4953532398cc39a5f82c9cce);
+        
+    
+        var popup_b4597b1e1f9d08678860cf5bffb4e31c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_95c8432d3967fdbbccf9c97adbfa5f6c = $(`<div id="html_95c8432d3967fdbbccf9c97adbfa5f6c" style="width: 100.0%; height: 100.0%;">Tipo de Local: Residência<br>Data: 2024-01-27 00:00:00<br>Lat: 0.0<br>Lng: 0.0</div>`)[0];
+                popup_b4597b1e1f9d08678860cf5bffb4e31c.setContent(html_95c8432d3967fdbbccf9c97adbfa5f6c);
+            
+        
+
+        marker_5f92f71db8b0b308dd1468adbfc59eda.bindPopup(popup_b4597b1e1f9d08678860cf5bffb4e31c)
+        ;
+
+        
+    
+    
+            var marker_c1286cdf106c2cbdd2931b40fb9d1fc8 = L.marker(
+                [-21.2112566090908, -47.8178771272727],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_cca177204365e00b23eaeb9eae78814f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_c1286cdf106c2cbdd2931b40fb9d1fc8.setIcon(icon_cca177204365e00b23eaeb9eae78814f);
+        
+    
+        var popup_eeff9289f837640c978e2a63c2ca5f18 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2fe17abb17e28630d74bfe7dc8e668f5 = $(`<div id="html_2fe17abb17e28630d74bfe7dc8e668f5" style="width: 100.0%; height: 100.0%;">Tipo de Local: Via Pública<br>Data: 2024-01-10 00:00:00<br>Lat: -21.2112566090908<br>Lng: -47.8178771272727</div>`)[0];
+                popup_eeff9289f837640c978e2a63c2ca5f18.setContent(html_2fe17abb17e28630d74bfe7dc8e668f5);
+            
+        
+
+        marker_c1286cdf106c2cbdd2931b40fb9d1fc8.bindPopup(popup_eeff9289f837640c978e2a63c2ca5f18)
+        ;
+
+        
+    
+    
+            var marker_483e7c931f8800ebe018e7b7f6028c8e = L.marker(
+                [0.0, 0.0],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_44216a18818db8ed82efda8b86ff3a00 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_483e7c931f8800ebe018e7b7f6028c8e.setIcon(icon_44216a18818db8ed82efda8b86ff3a00);
+        
+    
+        var popup_7fdae08bce483655db4d1ea9231b7865 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8edca21d52ace17ccf72871f09f4695e = $(`<div id="html_8edca21d52ace17ccf72871f09f4695e" style="width: 100.0%; height: 100.0%;">Tipo de Local: Condomínio Comercial<br>Data: 2024-01-04 00:00:00<br>Lat: 0.0<br>Lng: 0.0</div>`)[0];
+                popup_7fdae08bce483655db4d1ea9231b7865.setContent(html_8edca21d52ace17ccf72871f09f4695e);
+            
+        
+
+        marker_483e7c931f8800ebe018e7b7f6028c8e.bindPopup(popup_7fdae08bce483655db4d1ea9231b7865)
+        ;
+
+        
+    
+    
+            var marker_8c9c94b85030eff3d179ffdb9f7ac4fc = L.marker(
+                [-21.1435643479999, -47.817475799],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_31b6b8a76744ec5481fa1f7d4fb5ad65 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_8c9c94b85030eff3d179ffdb9f7ac4fc.setIcon(icon_31b6b8a76744ec5481fa1f7d4fb5ad65);
+        
+    
+        var popup_aaeccaf17edca23788b2ebce5ecdd226 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_83e2b80a3e9448100cb441bd1adee142 = $(`<div id="html_83e2b80a3e9448100cb441bd1adee142" style="width: 100.0%; height: 100.0%;">Tipo de Local: Via Pública<br>Data: 2024-01-05 00:00:00<br>Lat: -21.1435643479999<br>Lng: -47.817475799</div>`)[0];
+                popup_aaeccaf17edca23788b2ebce5ecdd226.setContent(html_83e2b80a3e9448100cb441bd1adee142);
+            
+        
+
+        marker_8c9c94b85030eff3d179ffdb9f7ac4fc.bindPopup(popup_aaeccaf17edca23788b2ebce5ecdd226)
+        ;
+
+        
+    
+    
+            var marker_54bdf3c6ead2e57f34c321693e6a09d8 = L.marker(
+                [-21.1435643479999, -47.817475799],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_6bf1c4e078b601bee5d9482871bd9fbf = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_54bdf3c6ead2e57f34c321693e6a09d8.setIcon(icon_6bf1c4e078b601bee5d9482871bd9fbf);
+        
+    
+        var popup_945335fa093568f2baef506fe145e526 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f11271480c6ad4a2f94a1c0728d85f02 = $(`<div id="html_f11271480c6ad4a2f94a1c0728d85f02" style="width: 100.0%; height: 100.0%;">Tipo de Local: Via Pública<br>Data: 2024-01-05 00:00:00<br>Lat: -21.1435643479999<br>Lng: -47.817475799</div>`)[0];
+                popup_945335fa093568f2baef506fe145e526.setContent(html_f11271480c6ad4a2f94a1c0728d85f02);
+            
+        
+
+        marker_54bdf3c6ead2e57f34c321693e6a09d8.bindPopup(popup_945335fa093568f2baef506fe145e526)
+        ;
+
+        
+    
+    
+            var marker_bc556f1b659e4c96b3130d5f7bbf1b82 = L.marker(
+                [-21.1435643479999, -47.817475799],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_dae47027087ebea2f3055d74b09f09e8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_bc556f1b659e4c96b3130d5f7bbf1b82.setIcon(icon_dae47027087ebea2f3055d74b09f09e8);
+        
+    
+        var popup_250ae9eee49b073ca372d498492596a3 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6b900070c2607c65a9c85a47d618c403 = $(`<div id="html_6b900070c2607c65a9c85a47d618c403" style="width: 100.0%; height: 100.0%;">Tipo de Local: Via Pública<br>Data: 2024-01-05 00:00:00<br>Lat: -21.1435643479999<br>Lng: -47.817475799</div>`)[0];
+                popup_250ae9eee49b073ca372d498492596a3.setContent(html_6b900070c2607c65a9c85a47d618c403);
+            
+        
+
+        marker_bc556f1b659e4c96b3130d5f7bbf1b82.bindPopup(popup_250ae9eee49b073ca372d498492596a3)
+        ;
+
+        
+    
+    
+            var marker_e266f126339dda5d5de5189050b8c026 = L.marker(
+                [-21.1435643479999, -47.817475799],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_88f4a2e41ff32bc1b0e2c96f89fc50b5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_e266f126339dda5d5de5189050b8c026.setIcon(icon_88f4a2e41ff32bc1b0e2c96f89fc50b5);
+        
+    
+        var popup_7a1c4d53bb248710094ddd941cd7f5e8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_61a08916702fdc66ae2c60bd6af659c0 = $(`<div id="html_61a08916702fdc66ae2c60bd6af659c0" style="width: 100.0%; height: 100.0%;">Tipo de Local: Via Pública<br>Data: 2024-01-05 00:00:00<br>Lat: -21.1435643479999<br>Lng: -47.817475799</div>`)[0];
+                popup_7a1c4d53bb248710094ddd941cd7f5e8.setContent(html_61a08916702fdc66ae2c60bd6af659c0);
+            
+        
+
+        marker_e266f126339dda5d5de5189050b8c026.bindPopup(popup_7a1c4d53bb248710094ddd941cd7f5e8)
+        ;
+
+        
+    
+    
+            var marker_003d26f7eb240050eea87cc7ea7ce29c = L.marker(
+                [-21.140271297, -47.816619383],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_36019822b778b4c9d6e3bcf954d596de = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_003d26f7eb240050eea87cc7ea7ce29c.setIcon(icon_36019822b778b4c9d6e3bcf954d596de);
+        
+    
+        var popup_1922f69e953299efef0a7793c2fcb4e5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2eb7b84457b6b150d56a44edc2ad6202 = $(`<div id="html_2eb7b84457b6b150d56a44edc2ad6202" style="width: 100.0%; height: 100.0%;">Tipo de Local: Via Pública<br>Data: 2024-01-09 00:00:00<br>Lat: -21.140271297<br>Lng: -47.816619383</div>`)[0];
+                popup_1922f69e953299efef0a7793c2fcb4e5.setContent(html_2eb7b84457b6b150d56a44edc2ad6202);
+            
+        
+
+        marker_003d26f7eb240050eea87cc7ea7ce29c.bindPopup(popup_1922f69e953299efef0a7793c2fcb4e5)
+        ;
+
+        
+    
+    
+            var marker_617ddc282c176a69c691344d334eafd4 = L.marker(
+                [-21.2008219472909, -47.8406384484545],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_a747349d81187e7750706930c24901e6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_617ddc282c176a69c691344d334eafd4.setIcon(icon_a747349d81187e7750706930c24901e6);
+        
+    
+        var popup_7c4ae0f723f0abeddd4f83f47721385c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_51e53c459ca2089ab656a43c2bede968 = $(`<div id="html_51e53c459ca2089ab656a43c2bede968" style="width: 100.0%; height: 100.0%;">Tipo de Local: Via Pública<br>Data: 2024-01-25 00:00:00<br>Lat: -21.2008219472909<br>Lng: -47.8406384484545</div>`)[0];
+                popup_7c4ae0f723f0abeddd4f83f47721385c.setContent(html_51e53c459ca2089ab656a43c2bede968);
+            
+        
+
+        marker_617ddc282c176a69c691344d334eafd4.bindPopup(popup_7c4ae0f723f0abeddd4f83f47721385c)
+        ;
+
+        
+    
+    
+            var marker_215178d03bede12217a741d3d64e826c = L.marker(
+                [-21.1931934759999, -47.8337514890714],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_e438eb811ad11b42680d324278042d55 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_215178d03bede12217a741d3d64e826c.setIcon(icon_e438eb811ad11b42680d324278042d55);
+        
+    
+        var popup_7ddded5b332e9f1ec1cab40212a03336 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8a78e2c9e2917009714410e662fb7de5 = $(`<div id="html_8a78e2c9e2917009714410e662fb7de5" style="width: 100.0%; height: 100.0%;">Tipo de Local: Via Pública<br>Data: 2024-01-13 00:00:00<br>Lat: -21.1931934759999<br>Lng: -47.8337514890714</div>`)[0];
+                popup_7ddded5b332e9f1ec1cab40212a03336.setContent(html_8a78e2c9e2917009714410e662fb7de5);
+            
+        
+
+        marker_215178d03bede12217a741d3d64e826c.bindPopup(popup_7ddded5b332e9f1ec1cab40212a03336)
+        ;
+
+        
+    
+    
+            var marker_f42a88c872a628bdeba65dcd60669ac9 = L.marker(
+                [-21.1996798916756, -47.8362486595945],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_87c13c6d0a0cbe5afa66d84f10c49b09 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_f42a88c872a628bdeba65dcd60669ac9.setIcon(icon_87c13c6d0a0cbe5afa66d84f10c49b09);
+        
+    
+        var popup_3338afb7214c8fe3bda58c2bf4a2c5b3 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_899b9337861b87750253f08a84199307 = $(`<div id="html_899b9337861b87750253f08a84199307" style="width: 100.0%; height: 100.0%;">Tipo de Local: Via Pública<br>Data: 2024-01-11 00:00:00<br>Lat: -21.1996798916756<br>Lng: -47.8362486595945</div>`)[0];
+                popup_3338afb7214c8fe3bda58c2bf4a2c5b3.setContent(html_899b9337861b87750253f08a84199307);
+            
+        
+
+        marker_f42a88c872a628bdeba65dcd60669ac9.bindPopup(popup_3338afb7214c8fe3bda58c2bf4a2c5b3)
+        ;
+
+        
+    
+    
+            var marker_96998999a66439baf1240b0fa1a8f7ea = L.marker(
+                [-21.1963759, -47.7726031],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_f5d6be36510b3c652e4bf3f76631e833 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_96998999a66439baf1240b0fa1a8f7ea.setIcon(icon_f5d6be36510b3c652e4bf3f76631e833);
+        
+    
+        var popup_d9705ee931e6457a4236e9626782b9b2 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_08ffe4ab25fac34027827133574641ea = $(`<div id="html_08ffe4ab25fac34027827133574641ea" style="width: 100.0%; height: 100.0%;">Tipo de Local: Comércio e Serviços<br>Data: 2024-01-21 00:00:00<br>Lat: -21.1963759<br>Lng: -47.7726031</div>`)[0];
+                popup_d9705ee931e6457a4236e9626782b9b2.setContent(html_08ffe4ab25fac34027827133574641ea);
+            
+        
+
+        marker_96998999a66439baf1240b0fa1a8f7ea.bindPopup(popup_d9705ee931e6457a4236e9626782b9b2)
+        ;
+
+        
+    
+    
+            var marker_49b948652895c6156c64a75a317998eb = L.marker(
+                [-21.1963759, -47.7726031],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_24c6ea87e3f0c1ddf8e401f59f9eb107 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_49b948652895c6156c64a75a317998eb.setIcon(icon_24c6ea87e3f0c1ddf8e401f59f9eb107);
+        
+    
+        var popup_757e317d33ccff9b8a4bc8b9d7cff3f6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c849abd85ec423fb81be2160d0c19078 = $(`<div id="html_c849abd85ec423fb81be2160d0c19078" style="width: 100.0%; height: 100.0%;">Tipo de Local: Comércio e Serviços<br>Data: 2024-01-21 00:00:00<br>Lat: -21.1963759<br>Lng: -47.7726031</div>`)[0];
+                popup_757e317d33ccff9b8a4bc8b9d7cff3f6.setContent(html_c849abd85ec423fb81be2160d0c19078);
+            
+        
+
+        marker_49b948652895c6156c64a75a317998eb.bindPopup(popup_757e317d33ccff9b8a4bc8b9d7cff3f6)
+        ;
+
+        
+    
+    
+            var marker_da60f85df455aac52aab2023b070d37a = L.marker(
+                [-21.16080257286, -47.73804245524],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_83f09c425139a92c40a64f49a5fea09f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_da60f85df455aac52aab2023b070d37a.setIcon(icon_83f09c425139a92c40a64f49a5fea09f);
+        
+    
+        var popup_1f9dfb8e003ea9ca4c480ffea171e61a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1e2a5eb8bbeb0d4cf468455509f9bd58 = $(`<div id="html_1e2a5eb8bbeb0d4cf468455509f9bd58" style="width: 100.0%; height: 100.0%;">Tipo de Local: Via Pública<br>Data: 2024-01-23 00:00:00<br>Lat: -21.16080257286<br>Lng: -47.73804245524</div>`)[0];
+                popup_1f9dfb8e003ea9ca4c480ffea171e61a.setContent(html_1e2a5eb8bbeb0d4cf468455509f9bd58);
+            
+        
+
+        marker_da60f85df455aac52aab2023b070d37a.bindPopup(popup_1f9dfb8e003ea9ca4c480ffea171e61a)
+        ;
+
+        
+    
+    
+            var marker_bcd265052e484d0f678707c59af4c44e = L.marker(
+                [-21.1771975, -47.8067633],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_c48f6f35b5ca0749a866a3b193314ca5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_bcd265052e484d0f678707c59af4c44e.setIcon(icon_c48f6f35b5ca0749a866a3b193314ca5);
+        
+    
+        var popup_f7c72d12a56d08f60de1cc69ff105d34 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6a3cf143145c7fd71c323c89b9b58426 = $(`<div id="html_6a3cf143145c7fd71c323c89b9b58426" style="width: 100.0%; height: 100.0%;">Tipo de Local: Via Pública<br>Data: 2024-02-10 00:00:00<br>Lat: -21.1771975<br>Lng: -47.8067633</div>`)[0];
+                popup_f7c72d12a56d08f60de1cc69ff105d34.setContent(html_6a3cf143145c7fd71c323c89b9b58426);
+            
+        
+
+        marker_bcd265052e484d0f678707c59af4c44e.bindPopup(popup_f7c72d12a56d08f60de1cc69ff105d34)
+        ;
+
+        
+    
+    
+            var marker_6109c361819b7447e3719ed1bfd2a9dd = L.marker(
+                [-21.17104939, -47.810227899],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_373042c4be0117cc7e87992f5295e997 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_6109c361819b7447e3719ed1bfd2a9dd.setIcon(icon_373042c4be0117cc7e87992f5295e997);
+        
+    
+        var popup_37f4b6f723ee329ec78f4e2fa1ca4fe1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_82a334a172231029adc757e4104489cd = $(`<div id="html_82a334a172231029adc757e4104489cd" style="width: 100.0%; height: 100.0%;">Tipo de Local: Comércio e Serviços<br>Data: 2024-02-02 00:00:00<br>Lat: -21.17104939<br>Lng: -47.810227899</div>`)[0];
+                popup_37f4b6f723ee329ec78f4e2fa1ca4fe1.setContent(html_82a334a172231029adc757e4104489cd);
+            
+        
+
+        marker_6109c361819b7447e3719ed1bfd2a9dd.bindPopup(popup_37f4b6f723ee329ec78f4e2fa1ca4fe1)
+        ;
+
+        
+    
+    
+            var marker_e7c093aa76e886c1492717de86389b3b = L.marker(
+                [-21.17104939, -47.810227899],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_3c9ceb267be8b84973bc70cc942c5825 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_e7c093aa76e886c1492717de86389b3b.setIcon(icon_3c9ceb267be8b84973bc70cc942c5825);
+        
+    
+        var popup_faa50951d183cb16f50ef08a348e050e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_634f1f32197b00045fb31f157e0c7b66 = $(`<div id="html_634f1f32197b00045fb31f157e0c7b66" style="width: 100.0%; height: 100.0%;">Tipo de Local: Comércio e Serviços<br>Data: 2024-02-02 00:00:00<br>Lat: -21.17104939<br>Lng: -47.810227899</div>`)[0];
+                popup_faa50951d183cb16f50ef08a348e050e.setContent(html_634f1f32197b00045fb31f157e0c7b66);
+            
+        
+
+        marker_e7c093aa76e886c1492717de86389b3b.bindPopup(popup_faa50951d183cb16f50ef08a348e050e)
+        ;
+
+        
+    
+    
+            var marker_8444b9dfaa128270a939a4ba7e388382 = L.marker(
+                [-21.1770232439999, -47.8069625099999],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_81d6261fc82b79c1e06d5065ece281e7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_8444b9dfaa128270a939a4ba7e388382.setIcon(icon_81d6261fc82b79c1e06d5065ece281e7);
+        
+    
+        var popup_e6f78d4e2b9e969a7565b1fb5a602395 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8a0f7eae9ce1cc0d45b656b587f4a029 = $(`<div id="html_8a0f7eae9ce1cc0d45b656b587f4a029" style="width: 100.0%; height: 100.0%;">Tipo de Local: Via Pública<br>Data: 2024-02-12 00:00:00<br>Lat: -21.1770232439999<br>Lng: -47.8069625099999</div>`)[0];
+                popup_e6f78d4e2b9e969a7565b1fb5a602395.setContent(html_8a0f7eae9ce1cc0d45b656b587f4a029);
+            
+        
+
+        marker_8444b9dfaa128270a939a4ba7e388382.bindPopup(popup_e6f78d4e2b9e969a7565b1fb5a602395)
+        ;
+
+        
+    
+    
+            var marker_5534ccc83b0832c060d06932d5c8b745 = L.marker(
+                [-21.1768428487693, -47.8064110808739],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_399d3b23ecbc8a0ae12cfa3196017e58 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_5534ccc83b0832c060d06932d5c8b745.setIcon(icon_399d3b23ecbc8a0ae12cfa3196017e58);
+        
+    
+        var popup_4c281242d5d30bb1382276fe6b194a4a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e20e990dc26338f732945944a4a33738 = $(`<div id="html_e20e990dc26338f732945944a4a33738" style="width: 100.0%; height: 100.0%;">Tipo de Local: Via Pública<br>Data: 2024-02-09 00:00:00<br>Lat: -21.1768428487693<br>Lng: -47.8064110808739</div>`)[0];
+                popup_4c281242d5d30bb1382276fe6b194a4a.setContent(html_e20e990dc26338f732945944a4a33738);
+            
+        
+
+        marker_5534ccc83b0832c060d06932d5c8b745.bindPopup(popup_4c281242d5d30bb1382276fe6b194a4a)
+        ;
+
+        
+    
+    
+            var marker_18600f55600edd7d44a13701194fa052 = L.marker(
+                [-21.1932869838333, -47.7998147144999],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_35e0e3f053ecd07f8ed124c637f91cbb = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_18600f55600edd7d44a13701194fa052.setIcon(icon_35e0e3f053ecd07f8ed124c637f91cbb);
+        
+    
+        var popup_40aa275df0266e09645cace7d7676182 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e0ddadc868f6804ccc6d0efa4047e9d5 = $(`<div id="html_e0ddadc868f6804ccc6d0efa4047e9d5" style="width: 100.0%; height: 100.0%;">Tipo de Local: Via Pública<br>Data: 2024-02-29 00:00:00<br>Lat: -21.1932869838333<br>Lng: -47.7998147144999</div>`)[0];
+                popup_40aa275df0266e09645cace7d7676182.setContent(html_e0ddadc868f6804ccc6d0efa4047e9d5);
+            
+        
+
+        marker_18600f55600edd7d44a13701194fa052.bindPopup(popup_40aa275df0266e09645cace7d7676182)
+        ;
+
+        
+    
+    
+            var marker_1a93e38bdd63ce79dca06c1fbd0369d0 = L.marker(
+                [-21.161012902, -47.800443091],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_7bae5cccd5ba65b1064b9e6d9f1e6036 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_1a93e38bdd63ce79dca06c1fbd0369d0.setIcon(icon_7bae5cccd5ba65b1064b9e6d9f1e6036);
+        
+    
+        var popup_7eb7b7ed53b8c0a8928cd7234f135803 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6e43aa60185e2eff093ced977b99000a = $(`<div id="html_6e43aa60185e2eff093ced977b99000a" style="width: 100.0%; height: 100.0%;">Tipo de Local: Via Pública<br>Data: 2024-02-21 00:00:00<br>Lat: -21.161012902<br>Lng: -47.800443091</div>`)[0];
+                popup_7eb7b7ed53b8c0a8928cd7234f135803.setContent(html_6e43aa60185e2eff093ced977b99000a);
+            
+        
+
+        marker_1a93e38bdd63ce79dca06c1fbd0369d0.bindPopup(popup_7eb7b7ed53b8c0a8928cd7234f135803)
+        ;
+
+        
+    
+    
+            var marker_c292da8e07f26b588f74b924c2f97ba3 = L.marker(
+                [-21.169422412, -47.8110213579999],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_4a7905c264ddca5e7c68369d57ca6f0c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_c292da8e07f26b588f74b924c2f97ba3.setIcon(icon_4a7905c264ddca5e7c68369d57ca6f0c);
+        
+    
+        var popup_d089fa36fd9f232bbb29c075fb510eca = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_733852f7d8ef5364e8d42eebacfcba2e = $(`<div id="html_733852f7d8ef5364e8d42eebacfcba2e" style="width: 100.0%; height: 100.0%;">Tipo de Local: Via Pública<br>Data: 2024-02-15 00:00:00<br>Lat: -21.169422412<br>Lng: -47.8110213579999</div>`)[0];
+                popup_d089fa36fd9f232bbb29c075fb510eca.setContent(html_733852f7d8ef5364e8d42eebacfcba2e);
+            
+        
+
+        marker_c292da8e07f26b588f74b924c2f97ba3.bindPopup(popup_d089fa36fd9f232bbb29c075fb510eca)
+        ;
+
+        
+    
+    
+            var marker_1f3b16d4e3edca35a3d6b357673ce29c = L.marker(
+                [-21.169422412, -47.8110213579999],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_97b42e46c2786c5a021d3410d108764e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_1f3b16d4e3edca35a3d6b357673ce29c.setIcon(icon_97b42e46c2786c5a021d3410d108764e);
+        
+    
+        var popup_82cd984a7305004dc49ad9703b8af2e1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_905dbac6617e0dd21bd510d4dea20db6 = $(`<div id="html_905dbac6617e0dd21bd510d4dea20db6" style="width: 100.0%; height: 100.0%;">Tipo de Local: Via Pública<br>Data: 2024-02-15 00:00:00<br>Lat: -21.169422412<br>Lng: -47.8110213579999</div>`)[0];
+                popup_82cd984a7305004dc49ad9703b8af2e1.setContent(html_905dbac6617e0dd21bd510d4dea20db6);
+            
+        
+
+        marker_1f3b16d4e3edca35a3d6b357673ce29c.bindPopup(popup_82cd984a7305004dc49ad9703b8af2e1)
+        ;
+
+        
+    
+    
+            var marker_de081c357b81b05a07c43b77efd58be8 = L.marker(
+                [-21.154318066, -47.803681776],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_7aea3310f0099a9316e302f151af0f21 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_de081c357b81b05a07c43b77efd58be8.setIcon(icon_7aea3310f0099a9316e302f151af0f21);
+        
+    
+        var popup_45609009755a5ff6c7ef4a6b24d73ace = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8792c76b57238763be435e61c27b676d = $(`<div id="html_8792c76b57238763be435e61c27b676d" style="width: 100.0%; height: 100.0%;">Tipo de Local: Via Pública<br>Data: 2024-02-16 00:00:00<br>Lat: -21.154318066<br>Lng: -47.803681776</div>`)[0];
+                popup_45609009755a5ff6c7ef4a6b24d73ace.setContent(html_8792c76b57238763be435e61c27b676d);
+            
+        
+
+        marker_de081c357b81b05a07c43b77efd58be8.bindPopup(popup_45609009755a5ff6c7ef4a6b24d73ace)
+        ;
+
+        
+    
+    
+            var marker_2dd6f4a3ee7768d3c0808a4ffc886801 = L.marker(
+                [-21.1585967, -47.7983795],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_26b407c7be6d4908ac2e386980550488 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_2dd6f4a3ee7768d3c0808a4ffc886801.setIcon(icon_26b407c7be6d4908ac2e386980550488);
+        
+    
+        var popup_62c93fc9ff06e7b5ea65d29cd801669f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3abaebc0fed515784baaa4e6d7d72270 = $(`<div id="html_3abaebc0fed515784baaa4e6d7d72270" style="width: 100.0%; height: 100.0%;">Tipo de Local: Via Pública<br>Data: 2024-02-21 00:00:00<br>Lat: -21.1585967<br>Lng: -47.7983795</div>`)[0];
+                popup_62c93fc9ff06e7b5ea65d29cd801669f.setContent(html_3abaebc0fed515784baaa4e6d7d72270);
+            
+        
+
+        marker_2dd6f4a3ee7768d3c0808a4ffc886801.bindPopup(popup_62c93fc9ff06e7b5ea65d29cd801669f)
+        ;
+
+        
+    
+    
+            var marker_cf09c11308f3236bb63de242e6bba58d = L.marker(
+                [-21.1580448085952, -47.8068655412619],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_f24e5e6c227761e2c79faf3748fa37a5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_cf09c11308f3236bb63de242e6bba58d.setIcon(icon_f24e5e6c227761e2c79faf3748fa37a5);
+        
+    
+        var popup_23e1766b20005aac84b7c8a1f2c3067f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_dd49e00636e368d00b78252ce422f283 = $(`<div id="html_dd49e00636e368d00b78252ce422f283" style="width: 100.0%; height: 100.0%;">Tipo de Local: Via Pública<br>Data: 2024-02-24 00:00:00<br>Lat: -21.1580448085952<br>Lng: -47.8068655412619</div>`)[0];
+                popup_23e1766b20005aac84b7c8a1f2c3067f.setContent(html_dd49e00636e368d00b78252ce422f283);
+            
+        
+
+        marker_cf09c11308f3236bb63de242e6bba58d.bindPopup(popup_23e1766b20005aac84b7c8a1f2c3067f)
+        ;
+
+        
+    
+    
+            var marker_6da673dfa19dcb4b51e985ef67f90191 = L.marker(
+                [-21.1670181, -47.8074329],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_e192ef13d6575028cb793f988e69f9da = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_6da673dfa19dcb4b51e985ef67f90191.setIcon(icon_e192ef13d6575028cb793f988e69f9da);
+        
+    
+        var popup_50a3084cc14613cf72dcbb04fca459f8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_38f4eb7f98efb59359dcf1c436c323d8 = $(`<div id="html_38f4eb7f98efb59359dcf1c436c323d8" style="width: 100.0%; height: 100.0%;">Tipo de Local: Via Pública<br>Data: 2024-02-26 00:00:00<br>Lat: -21.1670181<br>Lng: -47.8074329</div>`)[0];
+                popup_50a3084cc14613cf72dcbb04fca459f8.setContent(html_38f4eb7f98efb59359dcf1c436c323d8);
+            
+        
+
+        marker_6da673dfa19dcb4b51e985ef67f90191.bindPopup(popup_50a3084cc14613cf72dcbb04fca459f8)
+        ;
+
+        
+    
+    
+            var marker_be5c800d8c72a7013385ae4989bcdb46 = L.marker(
+                [-21.1740801, -47.8139786],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_2ca436382dba9f2a7d34ce9723f71628 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_be5c800d8c72a7013385ae4989bcdb46.setIcon(icon_2ca436382dba9f2a7d34ce9723f71628);
+        
+    
+        var popup_aad5f3edb3e96007bf779c44ae54cf8e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a41896a66aa6dc22cf3d92560a14500e = $(`<div id="html_a41896a66aa6dc22cf3d92560a14500e" style="width: 100.0%; height: 100.0%;">Tipo de Local: Via Pública<br>Data: 2024-02-02 00:00:00<br>Lat: -21.1740801<br>Lng: -47.8139786</div>`)[0];
+                popup_aad5f3edb3e96007bf779c44ae54cf8e.setContent(html_a41896a66aa6dc22cf3d92560a14500e);
+            
+        
+
+        marker_be5c800d8c72a7013385ae4989bcdb46.bindPopup(popup_aad5f3edb3e96007bf779c44ae54cf8e)
+        ;
+
+        
+    
+    
+            var marker_2704d5d8117c1de27628ebfa89a6be4a = L.marker(
+                [-21.1694529019999, -47.821847557],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_2e9866e53d50b03d450184f6eb076b85 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_2704d5d8117c1de27628ebfa89a6be4a.setIcon(icon_2e9866e53d50b03d450184f6eb076b85);
+        
+    
+        var popup_687e822c7640aa3660e1a80a6d9f3daa = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_34d0720ec6229d832954abfae41e2d8e = $(`<div id="html_34d0720ec6229d832954abfae41e2d8e" style="width: 100.0%; height: 100.0%;">Tipo de Local: Via Pública<br>Data: 2024-02-09 00:00:00<br>Lat: -21.1694529019999<br>Lng: -47.821847557</div>`)[0];
+                popup_687e822c7640aa3660e1a80a6d9f3daa.setContent(html_34d0720ec6229d832954abfae41e2d8e);
+            
+        
+
+        marker_2704d5d8117c1de27628ebfa89a6be4a.bindPopup(popup_687e822c7640aa3660e1a80a6d9f3daa)
+        ;
+
+        
+    
+    
+            var marker_b1027e2a5a452f91a5bd789077ec8dc7 = L.marker(
+                [-21.1694529019999, -47.821847557],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_ebb7804ea93f159638aca2aeb876707a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_b1027e2a5a452f91a5bd789077ec8dc7.setIcon(icon_ebb7804ea93f159638aca2aeb876707a);
+        
+    
+        var popup_1ce9531409ed101cc8ab4f96493a4163 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_deb259ec718c63cfbe1f76d18e2b7bcc = $(`<div id="html_deb259ec718c63cfbe1f76d18e2b7bcc" style="width: 100.0%; height: 100.0%;">Tipo de Local: Via Pública<br>Data: 2024-02-09 00:00:00<br>Lat: -21.1694529019999<br>Lng: -47.821847557</div>`)[0];
+                popup_1ce9531409ed101cc8ab4f96493a4163.setContent(html_deb259ec718c63cfbe1f76d18e2b7bcc);
+            
+        
+
+        marker_b1027e2a5a452f91a5bd789077ec8dc7.bindPopup(popup_1ce9531409ed101cc8ab4f96493a4163)
+        ;
+
+        
+    
+    
+            var marker_3ea79ea0bd2452d09aee80d4ed9331ee = L.marker(
+                [-21.1710331, -47.823347],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_6fa5341c3804e81f513ec5d97b938e29 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_3ea79ea0bd2452d09aee80d4ed9331ee.setIcon(icon_6fa5341c3804e81f513ec5d97b938e29);
+        
+    
+        var popup_794ea4d7178176b955712cfe17531098 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5b5d4107fa03b1b5774c0a801430b3fe = $(`<div id="html_5b5d4107fa03b1b5774c0a801430b3fe" style="width: 100.0%; height: 100.0%;">Tipo de Local: Via Pública<br>Data: 2024-01-23 00:00:00<br>Lat: -21.1710331<br>Lng: -47.823347</div>`)[0];
+                popup_794ea4d7178176b955712cfe17531098.setContent(html_5b5d4107fa03b1b5774c0a801430b3fe);
+            
+        
+
+        marker_3ea79ea0bd2452d09aee80d4ed9331ee.bindPopup(popup_794ea4d7178176b955712cfe17531098)
+        ;
+
+        
+    
+    
+            var marker_2fbfc4c35a9ccbfa70eadac50cab5fc4 = L.marker(
+                [-21.1502616, -47.8266883875714],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_5c7ebc79fe3f35fe789f9e78aa9314f8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_2fbfc4c35a9ccbfa70eadac50cab5fc4.setIcon(icon_5c7ebc79fe3f35fe789f9e78aa9314f8);
+        
+    
+        var popup_019be6710b6e639f9151135089b84bd3 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_77a6680193f8d9f1e99055fcba4e1726 = $(`<div id="html_77a6680193f8d9f1e99055fcba4e1726" style="width: 100.0%; height: 100.0%;">Tipo de Local: Via Pública<br>Data: 2024-02-05 00:00:00<br>Lat: -21.1502616<br>Lng: -47.8266883875714</div>`)[0];
+                popup_019be6710b6e639f9151135089b84bd3.setContent(html_77a6680193f8d9f1e99055fcba4e1726);
+            
+        
+
+        marker_2fbfc4c35a9ccbfa70eadac50cab5fc4.bindPopup(popup_019be6710b6e639f9151135089b84bd3)
+        ;
+
+        
+    
+    
+            var marker_12d1a4f1a6143434def263d34d21eb72 = L.marker(
+                [-21.1581847977222, -47.8280461376388],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_e37d089a20733715f8b1f26492fdd03b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_12d1a4f1a6143434def263d34d21eb72.setIcon(icon_e37d089a20733715f8b1f26492fdd03b);
+        
+    
+        var popup_69a8fc7a45608cfa66a770d04547ed9f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_22f963892a3db557fdf679f5f46631a0 = $(`<div id="html_22f963892a3db557fdf679f5f46631a0" style="width: 100.0%; height: 100.0%;">Tipo de Local: Via Pública<br>Data: 2024-02-09 00:00:00<br>Lat: -21.1581847977222<br>Lng: -47.8280461376388</div>`)[0];
+                popup_69a8fc7a45608cfa66a770d04547ed9f.setContent(html_22f963892a3db557fdf679f5f46631a0);
+            
+        
+
+        marker_12d1a4f1a6143434def263d34d21eb72.bindPopup(popup_69a8fc7a45608cfa66a770d04547ed9f)
+        ;
+
+        
+    
+    
+            var marker_76fdb59b50e1981cd5e1bc4e3e4c0163 = L.marker(
+                [-21.1317489749302, -47.8514680953953],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_8bd122f8732025fae45b047e7a019b1e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_76fdb59b50e1981cd5e1bc4e3e4c0163.setIcon(icon_8bd122f8732025fae45b047e7a019b1e);
+        
+    
+        var popup_9b8165e131816e4b19970ff5ef3c7b96 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3ac7412e01bb14f1435bfd59f051fa4b = $(`<div id="html_3ac7412e01bb14f1435bfd59f051fa4b" style="width: 100.0%; height: 100.0%;">Tipo de Local: Via Pública<br>Data: 2024-02-14 00:00:00<br>Lat: -21.1317489749302<br>Lng: -47.8514680953953</div>`)[0];
+                popup_9b8165e131816e4b19970ff5ef3c7b96.setContent(html_3ac7412e01bb14f1435bfd59f051fa4b);
+            
+        
+
+        marker_76fdb59b50e1981cd5e1bc4e3e4c0163.bindPopup(popup_9b8165e131816e4b19970ff5ef3c7b96)
+        ;
+
+        
+    
+    
+            var marker_0592e69fee794d8631c51e0a0d3ae58c = L.marker(
+                [-21.1889238979999, -47.807711345],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_2b76942bcbe4fb3b1f7b4d833fbad4e8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_0592e69fee794d8631c51e0a0d3ae58c.setIcon(icon_2b76942bcbe4fb3b1f7b4d833fbad4e8);
+        
+    
+        var popup_5a9f833fe4826521395e9dac9d40c69b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0656baf0aa3744a779e1ccc66006646a = $(`<div id="html_0656baf0aa3744a779e1ccc66006646a" style="width: 100.0%; height: 100.0%;">Tipo de Local: Escritório<br>Data: 2024-02-06 00:00:00<br>Lat: -21.1889238979999<br>Lng: -47.807711345</div>`)[0];
+                popup_5a9f833fe4826521395e9dac9d40c69b.setContent(html_0656baf0aa3744a779e1ccc66006646a);
+            
+        
+
+        marker_0592e69fee794d8631c51e0a0d3ae58c.bindPopup(popup_5a9f833fe4826521395e9dac9d40c69b)
+        ;
+
+        
+    
+    
+            var marker_0af004470880fe0556e733f1a8e8ca47 = L.marker(
+                [-21.202978929, -47.767955479],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_cb34bdacf4f662f80b704715973fd243 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_0af004470880fe0556e733f1a8e8ca47.setIcon(icon_cb34bdacf4f662f80b704715973fd243);
+        
+    
+        var popup_60bc22a5dc279b598dd566cfa06e7883 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_becf0151761cc5d0a544a799dd3029f2 = $(`<div id="html_becf0151761cc5d0a544a799dd3029f2" style="width: 100.0%; height: 100.0%;">Tipo de Local: Via Pública<br>Data: 2024-02-08 00:00:00<br>Lat: -21.202978929<br>Lng: -47.767955479</div>`)[0];
+                popup_60bc22a5dc279b598dd566cfa06e7883.setContent(html_becf0151761cc5d0a544a799dd3029f2);
+            
+        
+
+        marker_0af004470880fe0556e733f1a8e8ca47.bindPopup(popup_60bc22a5dc279b598dd566cfa06e7883)
+        ;
+
+        
+    
+    
+            var marker_262955b7cb902eecc272af9573ff51ea = L.marker(
+                [-21.2171339509999, -47.792580758],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_0a98e83ca206a18e05571aa9bd69e5a0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_262955b7cb902eecc272af9573ff51ea.setIcon(icon_0a98e83ca206a18e05571aa9bd69e5a0);
+        
+    
+        var popup_903f8d48222cad39c0d9ffd2a2f17011 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_021d51cd0a66d21fac272af0e9305cd8 = $(`<div id="html_021d51cd0a66d21fac272af0e9305cd8" style="width: 100.0%; height: 100.0%;">Tipo de Local: Via Pública<br>Data: 2024-02-14 00:00:00<br>Lat: -21.2171339509999<br>Lng: -47.792580758</div>`)[0];
+                popup_903f8d48222cad39c0d9ffd2a2f17011.setContent(html_021d51cd0a66d21fac272af0e9305cd8);
+            
+        
+
+        marker_262955b7cb902eecc272af9573ff51ea.bindPopup(popup_903f8d48222cad39c0d9ffd2a2f17011)
+        ;
+
+        
+    
+    
+            var marker_477b0403100e607217c0f3a694081e10 = L.marker(
+                [-21.2171339509999, -47.792580758],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_8548e05248db2a23024bbdc556d1fc83 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_477b0403100e607217c0f3a694081e10.setIcon(icon_8548e05248db2a23024bbdc556d1fc83);
+        
+    
+        var popup_7afe1f067bec1b11b4aafc151209557a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_65548899783a63c27752fbf69f77f5e5 = $(`<div id="html_65548899783a63c27752fbf69f77f5e5" style="width: 100.0%; height: 100.0%;">Tipo de Local: Via Pública<br>Data: 2024-02-14 00:00:00<br>Lat: -21.2171339509999<br>Lng: -47.792580758</div>`)[0];
+                popup_7afe1f067bec1b11b4aafc151209557a.setContent(html_65548899783a63c27752fbf69f77f5e5);
+            
+        
+
+        marker_477b0403100e607217c0f3a694081e10.bindPopup(popup_7afe1f067bec1b11b4aafc151209557a)
+        ;
+
+        
+    
+    
+            var marker_62138e42f29b0253527d905849051513 = L.marker(
+                [-21.08380894, -47.801847891],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_b1f468e07c5c361dc702e8f6a4d471ae = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_62138e42f29b0253527d905849051513.setIcon(icon_b1f468e07c5c361dc702e8f6a4d471ae);
+        
+    
+        var popup_b1f73f8c70d1d44472288f16e89da1d0 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_59f1380e7ca84afd2dfb3090e852d6ee = $(`<div id="html_59f1380e7ca84afd2dfb3090e852d6ee" style="width: 100.0%; height: 100.0%;">Tipo de Local: Via Pública<br>Data: 2024-02-07 00:00:00<br>Lat: -21.08380894<br>Lng: -47.801847891</div>`)[0];
+                popup_b1f73f8c70d1d44472288f16e89da1d0.setContent(html_59f1380e7ca84afd2dfb3090e852d6ee);
+            
+        
+
+        marker_62138e42f29b0253527d905849051513.bindPopup(popup_b1f73f8c70d1d44472288f16e89da1d0)
+        ;
+
+        
+    
+    
+            var marker_e02d09ac1720c3dbe9e24c0d09b0b26c = L.marker(
+                [-21.08380894, -47.801847891],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_94e3e2d1179d97a9eeae391f33d09c02 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_e02d09ac1720c3dbe9e24c0d09b0b26c.setIcon(icon_94e3e2d1179d97a9eeae391f33d09c02);
+        
+    
+        var popup_e467397e09c49c94bafd1a6caccd1fa2 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6752e495a59fd3e08bf5b68f4f083008 = $(`<div id="html_6752e495a59fd3e08bf5b68f4f083008" style="width: 100.0%; height: 100.0%;">Tipo de Local: Via Pública<br>Data: 2024-02-07 00:00:00<br>Lat: -21.08380894<br>Lng: -47.801847891</div>`)[0];
+                popup_e467397e09c49c94bafd1a6caccd1fa2.setContent(html_6752e495a59fd3e08bf5b68f4f083008);
+            
+        
+
+        marker_e02d09ac1720c3dbe9e24c0d09b0b26c.bindPopup(popup_e467397e09c49c94bafd1a6caccd1fa2)
+        ;
+
+        
+    
+    
+            var marker_df2c40b8b2241ee1278076fdeaad9dac = L.marker(
+                [-21.08380894, -47.801847891],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_97529a69c6b0fbfa1ad30b0c6dc9c9e0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_df2c40b8b2241ee1278076fdeaad9dac.setIcon(icon_97529a69c6b0fbfa1ad30b0c6dc9c9e0);
+        
+    
+        var popup_dede28e1c8f579b3a3e8635abb77555f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c98ae104e06f1a32080e997746ff95dc = $(`<div id="html_c98ae104e06f1a32080e997746ff95dc" style="width: 100.0%; height: 100.0%;">Tipo de Local: Via Pública<br>Data: 2024-02-07 00:00:00<br>Lat: -21.08380894<br>Lng: -47.801847891</div>`)[0];
+                popup_dede28e1c8f579b3a3e8635abb77555f.setContent(html_c98ae104e06f1a32080e997746ff95dc);
+            
+        
+
+        marker_df2c40b8b2241ee1278076fdeaad9dac.bindPopup(popup_dede28e1c8f579b3a3e8635abb77555f)
+        ;
+
+        
+    
+    
+            var marker_0ef49a17ef21d302aef71030a4b8900d = L.marker(
+                [-21.08380894, -47.801847891],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_c1ded98a9f77efcb702a9b5eeebb916c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_0ef49a17ef21d302aef71030a4b8900d.setIcon(icon_c1ded98a9f77efcb702a9b5eeebb916c);
+        
+    
+        var popup_6b7ecea047e8f5f2fdeccdc7d4e4f0e1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a585e74a09e260e01d530e31b7b378ca = $(`<div id="html_a585e74a09e260e01d530e31b7b378ca" style="width: 100.0%; height: 100.0%;">Tipo de Local: Via Pública<br>Data: 2024-02-07 00:00:00<br>Lat: -21.08380894<br>Lng: -47.801847891</div>`)[0];
+                popup_6b7ecea047e8f5f2fdeccdc7d4e4f0e1.setContent(html_a585e74a09e260e01d530e31b7b378ca);
+            
+        
+
+        marker_0ef49a17ef21d302aef71030a4b8900d.bindPopup(popup_6b7ecea047e8f5f2fdeccdc7d4e4f0e1)
+        ;
+
+        
+    
+    
+            var marker_0e1e90962e8f2db2ac6f2fdbde16acf3 = L.marker(
+                [-21.08380894, -47.801847891],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_7e439875252a39d621e17642f695d503 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_0e1e90962e8f2db2ac6f2fdbde16acf3.setIcon(icon_7e439875252a39d621e17642f695d503);
+        
+    
+        var popup_3b8d7b8f5f13794663c0a109cdae4787 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2758eccb00cf125c8a12e967020e3fb5 = $(`<div id="html_2758eccb00cf125c8a12e967020e3fb5" style="width: 100.0%; height: 100.0%;">Tipo de Local: Via Pública<br>Data: 2024-02-07 00:00:00<br>Lat: -21.08380894<br>Lng: -47.801847891</div>`)[0];
+                popup_3b8d7b8f5f13794663c0a109cdae4787.setContent(html_2758eccb00cf125c8a12e967020e3fb5);
+            
+        
+
+        marker_0e1e90962e8f2db2ac6f2fdbde16acf3.bindPopup(popup_3b8d7b8f5f13794663c0a109cdae4787)
+        ;
+
+        
+    
+    
+            var marker_c5f44ce4ab9412857f925d92a1fac9d7 = L.marker(
+                [-21.08380894, -47.801847891],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_4a3889db1c766e00a3b80104c545f612 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_c5f44ce4ab9412857f925d92a1fac9d7.setIcon(icon_4a3889db1c766e00a3b80104c545f612);
+        
+    
+        var popup_921f051525392bffa7d9b352ade3a1c8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f0f5fcb0992d0b6d7608f0be03f6d3c6 = $(`<div id="html_f0f5fcb0992d0b6d7608f0be03f6d3c6" style="width: 100.0%; height: 100.0%;">Tipo de Local: Via Pública<br>Data: 2024-02-07 00:00:00<br>Lat: -21.08380894<br>Lng: -47.801847891</div>`)[0];
+                popup_921f051525392bffa7d9b352ade3a1c8.setContent(html_f0f5fcb0992d0b6d7608f0be03f6d3c6);
+            
+        
+
+        marker_c5f44ce4ab9412857f925d92a1fac9d7.bindPopup(popup_921f051525392bffa7d9b352ade3a1c8)
+        ;
+
+        
+    
+    
+            var marker_07906b636ed6e245ecc3184a3a57a526 = L.marker(
+                [-21.08380894, -47.801847891],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_ce75fd8b8e4461848fd7b28ae4a63993 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_07906b636ed6e245ecc3184a3a57a526.setIcon(icon_ce75fd8b8e4461848fd7b28ae4a63993);
+        
+    
+        var popup_ac94a4c4313d3112db40f2c041e2265e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3b861e83b8e7b558f12a086f0274bb5e = $(`<div id="html_3b861e83b8e7b558f12a086f0274bb5e" style="width: 100.0%; height: 100.0%;">Tipo de Local: Via Pública<br>Data: 2024-02-07 00:00:00<br>Lat: -21.08380894<br>Lng: -47.801847891</div>`)[0];
+                popup_ac94a4c4313d3112db40f2c041e2265e.setContent(html_3b861e83b8e7b558f12a086f0274bb5e);
+            
+        
+
+        marker_07906b636ed6e245ecc3184a3a57a526.bindPopup(popup_ac94a4c4313d3112db40f2c041e2265e)
+        ;
+
+        
+    
+    
+            var marker_7a048b64ff79508d619f1227167979f7 = L.marker(
+                [-21.08380894, -47.801847891],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_93d2675c059d71f9b8823ed78e25b132 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_7a048b64ff79508d619f1227167979f7.setIcon(icon_93d2675c059d71f9b8823ed78e25b132);
+        
+    
+        var popup_8d8cec53d014b832c23b52cb035782b2 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1b68041ac689d4e3ce6a87d5bc1f4455 = $(`<div id="html_1b68041ac689d4e3ce6a87d5bc1f4455" style="width: 100.0%; height: 100.0%;">Tipo de Local: Via Pública<br>Data: 2024-02-07 00:00:00<br>Lat: -21.08380894<br>Lng: -47.801847891</div>`)[0];
+                popup_8d8cec53d014b832c23b52cb035782b2.setContent(html_1b68041ac689d4e3ce6a87d5bc1f4455);
+            
+        
+
+        marker_7a048b64ff79508d619f1227167979f7.bindPopup(popup_8d8cec53d014b832c23b52cb035782b2)
+        ;
+
+        
+    
+    
+            var marker_28847950faa5b89c0b289a7e64e78883 = L.marker(
+                [-21.1325558, -47.8040999],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_7a80228be7eaf8a8853d9b0c912308f9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_28847950faa5b89c0b289a7e64e78883.setIcon(icon_7a80228be7eaf8a8853d9b0c912308f9);
+        
+    
+        var popup_a51f650f44b8e797594335569d91d3f0 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0d22441c5f475097305248a1cd5e6a7f = $(`<div id="html_0d22441c5f475097305248a1cd5e6a7f" style="width: 100.0%; height: 100.0%;">Tipo de Local: Via Pública<br>Data: 2024-02-21 00:00:00<br>Lat: -21.1325558<br>Lng: -47.8040999</div>`)[0];
+                popup_a51f650f44b8e797594335569d91d3f0.setContent(html_0d22441c5f475097305248a1cd5e6a7f);
+            
+        
+
+        marker_28847950faa5b89c0b289a7e64e78883.bindPopup(popup_a51f650f44b8e797594335569d91d3f0)
+        ;
+
+        
+    
+    
+            var marker_6ee4ea5acf91c5293744321568e64a2e = L.marker(
+                [-21.2040449899999, -47.8520146719999],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_ce13a6f6dc9037ef4d0de6ec4278039f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_6ee4ea5acf91c5293744321568e64a2e.setIcon(icon_ce13a6f6dc9037ef4d0de6ec4278039f);
+        
+    
+        var popup_d22c2f82fc20709aa87be433c36fde81 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b0b2355ce525b7c5d76b5c4bdbcc36f9 = $(`<div id="html_b0b2355ce525b7c5d76b5c4bdbcc36f9" style="width: 100.0%; height: 100.0%;">Tipo de Local: Via Pública<br>Data: 2024-02-01 00:00:00<br>Lat: -21.2040449899999<br>Lng: -47.8520146719999</div>`)[0];
+                popup_d22c2f82fc20709aa87be433c36fde81.setContent(html_b0b2355ce525b7c5d76b5c4bdbcc36f9);
+            
+        
+
+        marker_6ee4ea5acf91c5293744321568e64a2e.bindPopup(popup_d22c2f82fc20709aa87be433c36fde81)
+        ;
+
+        
+    
+    
+            var marker_835030d4e3e371c0727e52cd4f329e4d = L.marker(
+                [-21.1906010609714, -47.7694874275428],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_2830b9337dc007aeaae3f39fdf2f9186 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_835030d4e3e371c0727e52cd4f329e4d.setIcon(icon_2830b9337dc007aeaae3f39fdf2f9186);
+        
+    
+        var popup_82b30bfe199ce102ea1489c1b26bed20 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_48641bea5258ac0c30351db40b175ab4 = $(`<div id="html_48641bea5258ac0c30351db40b175ab4" style="width: 100.0%; height: 100.0%;">Tipo de Local: Via Pública<br>Data: 2024-02-12 00:00:00<br>Lat: -21.1906010609714<br>Lng: -47.7694874275428</div>`)[0];
+                popup_82b30bfe199ce102ea1489c1b26bed20.setContent(html_48641bea5258ac0c30351db40b175ab4);
+            
+        
+
+        marker_835030d4e3e371c0727e52cd4f329e4d.bindPopup(popup_82b30bfe199ce102ea1489c1b26bed20)
+        ;
+
+        
+    
+    
+            var marker_c302113c84349d3c41e0d0247e33099c = L.marker(
+                [-21.2017755816689, -47.762517395277],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_a155b6ad6b3cd796dc87f7a44938d6e9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_c302113c84349d3c41e0d0247e33099c.setIcon(icon_a155b6ad6b3cd796dc87f7a44938d6e9);
+        
+    
+        var popup_dbaa2038ea4aa0390ea6520fd1e46548 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b2adfef6cccd4eb9ae337c2f972dbe9f = $(`<div id="html_b2adfef6cccd4eb9ae337c2f972dbe9f" style="width: 100.0%; height: 100.0%;">Tipo de Local: Via Pública<br>Data: 2024-02-23 00:00:00<br>Lat: -21.2017755816689<br>Lng: -47.762517395277</div>`)[0];
+                popup_dbaa2038ea4aa0390ea6520fd1e46548.setContent(html_b2adfef6cccd4eb9ae337c2f972dbe9f);
+            
+        
+
+        marker_c302113c84349d3c41e0d0247e33099c.bindPopup(popup_dbaa2038ea4aa0390ea6520fd1e46548)
+        ;
+
+        
+    
+    
+            var marker_9c59f48adbc3ad3768f4eb74df4713dc = L.marker(
+                [0.0, 0.0],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_26b5a1b099c4a3be7446960a6f6055c4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_9c59f48adbc3ad3768f4eb74df4713dc.setIcon(icon_26b5a1b099c4a3be7446960a6f6055c4);
+        
+    
+        var popup_8bba7473c1b599603d3472ac1a260dd3 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d716c713e5d2411ae5ca585c44172796 = $(`<div id="html_d716c713e5d2411ae5ca585c44172796" style="width: 100.0%; height: 100.0%;">Tipo de Local: Condomínio Comercial<br>Data: 2024-03-16 00:00:00<br>Lat: 0.0<br>Lng: 0.0</div>`)[0];
+                popup_8bba7473c1b599603d3472ac1a260dd3.setContent(html_d716c713e5d2411ae5ca585c44172796);
+            
+        
+
+        marker_9c59f48adbc3ad3768f4eb74df4713dc.bindPopup(popup_8bba7473c1b599603d3472ac1a260dd3)
+        ;
+
+        
+    
+    
+            var marker_52d31441e90870c227dbcb49b1d1bf0f = L.marker(
+                [-21.1664670549868, -47.8128859315263],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_301718ae932bcfbb6cce4fac1d3f4f57 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_52d31441e90870c227dbcb49b1d1bf0f.setIcon(icon_301718ae932bcfbb6cce4fac1d3f4f57);
+        
+    
+        var popup_2dc90d90c1832a5658e3aa12f4c82cf8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0c78c6401fb8fa125bc79cfe03ee2d03 = $(`<div id="html_0c78c6401fb8fa125bc79cfe03ee2d03" style="width: 100.0%; height: 100.0%;">Tipo de Local: Via Pública<br>Data: 2024-03-20 00:00:00<br>Lat: -21.1664670549868<br>Lng: -47.8128859315263</div>`)[0];
+                popup_2dc90d90c1832a5658e3aa12f4c82cf8.setContent(html_0c78c6401fb8fa125bc79cfe03ee2d03);
+            
+        
+
+        marker_52d31441e90870c227dbcb49b1d1bf0f.bindPopup(popup_2dc90d90c1832a5658e3aa12f4c82cf8)
+        ;
+
+        
+    
+    
+            var marker_2aa21fc3204f342c21f9d937718850fd = L.marker(
+                [-21.169711189375, -47.7922075965],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_53d6b055c273ae89f03509873170b7f8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_2aa21fc3204f342c21f9d937718850fd.setIcon(icon_53d6b055c273ae89f03509873170b7f8);
+        
+    
+        var popup_95e94a077818e326f8ecf51690b05ceb = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e03a5e2c4f5e6ca74e886d460ba14f8a = $(`<div id="html_e03a5e2c4f5e6ca74e886d460ba14f8a" style="width: 100.0%; height: 100.0%;">Tipo de Local: Via Pública<br>Data: 2024-03-26 00:00:00<br>Lat: -21.169711189375<br>Lng: -47.7922075965</div>`)[0];
+                popup_95e94a077818e326f8ecf51690b05ceb.setContent(html_e03a5e2c4f5e6ca74e886d460ba14f8a);
+            
+        
+
+        marker_2aa21fc3204f342c21f9d937718850fd.bindPopup(popup_95e94a077818e326f8ecf51690b05ceb)
+        ;
+
+        
+    
+    
+            var marker_52701ad70483fb30556af39e1fbd6585 = L.marker(
+                [-21.1751940070626, -47.7967964883231],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_c5a95559cb0d8a8ce2e464786a06ca23 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_52701ad70483fb30556af39e1fbd6585.setIcon(icon_c5a95559cb0d8a8ce2e464786a06ca23);
+        
+    
+        var popup_69b1afbf79781fb95deaf27304db074b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2d8556f6be3e3e42cc6bc0ffae62fcd7 = $(`<div id="html_2d8556f6be3e3e42cc6bc0ffae62fcd7" style="width: 100.0%; height: 100.0%;">Tipo de Local: Via Pública<br>Data: 2024-03-29 00:00:00<br>Lat: -21.1751940070626<br>Lng: -47.7967964883231</div>`)[0];
+                popup_69b1afbf79781fb95deaf27304db074b.setContent(html_2d8556f6be3e3e42cc6bc0ffae62fcd7);
+            
+        
+
+        marker_52701ad70483fb30556af39e1fbd6585.bindPopup(popup_69b1afbf79781fb95deaf27304db074b)
+        ;
+
+        
+    
+    
+            var marker_9250d041df3dbb2efe2146f506199770 = L.marker(
+                [-21.1349664, -47.8375941],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_92015f21efb968a69ca5a39087fcdb93 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_9250d041df3dbb2efe2146f506199770.setIcon(icon_92015f21efb968a69ca5a39087fcdb93);
+        
+    
+        var popup_07e5df03776740d2f1d00171ea7a25b7 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7557dfe0a4f5d6d6ffe77a84a3dbecb6 = $(`<div id="html_7557dfe0a4f5d6d6ffe77a84a3dbecb6" style="width: 100.0%; height: 100.0%;">Tipo de Local: Via Pública<br>Data: 2024-03-29 00:00:00<br>Lat: -21.1349664<br>Lng: -47.8375941</div>`)[0];
+                popup_07e5df03776740d2f1d00171ea7a25b7.setContent(html_7557dfe0a4f5d6d6ffe77a84a3dbecb6);
+            
+        
+
+        marker_9250d041df3dbb2efe2146f506199770.bindPopup(popup_07e5df03776740d2f1d00171ea7a25b7)
+        ;
+
+        
+    
+    
+            var marker_b12c2c6f1be8b3dd7c6997b1c6d4f506 = L.marker(
+                [-21.1349664, -47.8375941],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_ca58daef18c16affc20ec7f6b1e03ae1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_b12c2c6f1be8b3dd7c6997b1c6d4f506.setIcon(icon_ca58daef18c16affc20ec7f6b1e03ae1);
+        
+    
+        var popup_6c66f63c1d79ed1183775ffd803845fe = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_206b5060cd30cfd372b0150d6c0de802 = $(`<div id="html_206b5060cd30cfd372b0150d6c0de802" style="width: 100.0%; height: 100.0%;">Tipo de Local: Via Pública<br>Data: 2024-03-29 00:00:00<br>Lat: -21.1349664<br>Lng: -47.8375941</div>`)[0];
+                popup_6c66f63c1d79ed1183775ffd803845fe.setContent(html_206b5060cd30cfd372b0150d6c0de802);
+            
+        
+
+        marker_b12c2c6f1be8b3dd7c6997b1c6d4f506.bindPopup(popup_6c66f63c1d79ed1183775ffd803845fe)
+        ;
+
+        
+    
+    
+            var marker_776f920d68706420b455094fc51af90b = L.marker(
+                [-21.172624777, -47.8438928799999],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_4a2d3c0618a39f378c16f349014d4147 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_776f920d68706420b455094fc51af90b.setIcon(icon_4a2d3c0618a39f378c16f349014d4147);
+        
+    
+        var popup_95450f2483289375ced7d0216274a205 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e1c5aac0830f4e720a8f00b8419b90f7 = $(`<div id="html_e1c5aac0830f4e720a8f00b8419b90f7" style="width: 100.0%; height: 100.0%;">Tipo de Local: Via Pública<br>Data: 2024-03-08 00:00:00<br>Lat: -21.172624777<br>Lng: -47.8438928799999</div>`)[0];
+                popup_95450f2483289375ced7d0216274a205.setContent(html_e1c5aac0830f4e720a8f00b8419b90f7);
+            
+        
+
+        marker_776f920d68706420b455094fc51af90b.bindPopup(popup_95450f2483289375ced7d0216274a205)
+        ;
+
+        
+    
+    
+            var marker_f1b4855fd9aa59a2f986df0732193e14 = L.marker(
+                [-21.1393904207948, -47.8525950018718],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_8d8c04c7054773dbe2632cff43376a15 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_f1b4855fd9aa59a2f986df0732193e14.setIcon(icon_8d8c04c7054773dbe2632cff43376a15);
+        
+    
+        var popup_fd69b1806e4b9472937744c27cbbc44d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_050c228dd5bb967c9abe108f50df2852 = $(`<div id="html_050c228dd5bb967c9abe108f50df2852" style="width: 100.0%; height: 100.0%;">Tipo de Local: Via Pública<br>Data: 2024-03-12 00:00:00<br>Lat: -21.1393904207948<br>Lng: -47.8525950018718</div>`)[0];
+                popup_fd69b1806e4b9472937744c27cbbc44d.setContent(html_050c228dd5bb967c9abe108f50df2852);
+            
+        
+
+        marker_f1b4855fd9aa59a2f986df0732193e14.bindPopup(popup_fd69b1806e4b9472937744c27cbbc44d)
+        ;
+
+        
+    
+    
+            var marker_b3b5f1e12f79792e6bec041a110d4e99 = L.marker(
+                [0.0, 0.0],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_01963dae7f34e2e6e105fe691963456f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_b3b5f1e12f79792e6bec041a110d4e99.setIcon(icon_01963dae7f34e2e6e105fe691963456f);
+        
+    
+        var popup_7409cb1e1d4457250232e6aab62becc7 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_71e8d6433ff18e58f4309743d3d74679 = $(`<div id="html_71e8d6433ff18e58f4309743d3d74679" style="width: 100.0%; height: 100.0%;">Tipo de Local: Estacionamento/Garagem<br>Data: 2024-03-21 00:00:00<br>Lat: 0.0<br>Lng: 0.0</div>`)[0];
+                popup_7409cb1e1d4457250232e6aab62becc7.setContent(html_71e8d6433ff18e58f4309743d3d74679);
+            
+        
+
+        marker_b3b5f1e12f79792e6bec041a110d4e99.bindPopup(popup_7409cb1e1d4457250232e6aab62becc7)
+        ;
+
+        
+    
+    
+            var marker_8898f95b93947f0a52773970de09812e = L.marker(
+                [-21.202978929, -47.767955479],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_5c13d41a9659d2103e317954d42c88b2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_8898f95b93947f0a52773970de09812e.setIcon(icon_5c13d41a9659d2103e317954d42c88b2);
+        
+    
+        var popup_53ec3bd0f246dd92179bab937607401a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_acb1c590458a4e824fbb97bf06521c87 = $(`<div id="html_acb1c590458a4e824fbb97bf06521c87" style="width: 100.0%; height: 100.0%;">Tipo de Local: Via Pública<br>Data: 2024-03-04 00:00:00<br>Lat: -21.202978929<br>Lng: -47.767955479</div>`)[0];
+                popup_53ec3bd0f246dd92179bab937607401a.setContent(html_acb1c590458a4e824fbb97bf06521c87);
+            
+        
+
+        marker_8898f95b93947f0a52773970de09812e.bindPopup(popup_53ec3bd0f246dd92179bab937607401a)
+        ;
+
+        
+    
+    
+            var marker_94008f39447f3fc741d62377f4ad9fd7 = L.marker(
+                [-21.202978929, -47.767955479],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_0befa73dd47d2778f0e278d7fd129113 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_94008f39447f3fc741d62377f4ad9fd7.setIcon(icon_0befa73dd47d2778f0e278d7fd129113);
+        
+    
+        var popup_2d22e9493a5a3f95730b9279c9117aa3 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3a7b4f08e8560983e9516c75191ffa2e = $(`<div id="html_3a7b4f08e8560983e9516c75191ffa2e" style="width: 100.0%; height: 100.0%;">Tipo de Local: Via Pública<br>Data: 2024-03-23 00:00:00<br>Lat: -21.202978929<br>Lng: -47.767955479</div>`)[0];
+                popup_2d22e9493a5a3f95730b9279c9117aa3.setContent(html_3a7b4f08e8560983e9516c75191ffa2e);
+            
+        
+
+        marker_94008f39447f3fc741d62377f4ad9fd7.bindPopup(popup_2d22e9493a5a3f95730b9279c9117aa3)
+        ;
+
+        
+    
+    
+            var marker_0e46151218ae05e6046e51812ba748b9 = L.marker(
+                [-21.116901479, -47.786446719],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_34e8506a272baf9a92fe92f71294c391 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_0e46151218ae05e6046e51812ba748b9.setIcon(icon_34e8506a272baf9a92fe92f71294c391);
+        
+    
+        var popup_ef77f4b8a46486203b0e14b9991e294b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_46f3d3fa2da9178bc7bbc5faa4726992 = $(`<div id="html_46f3d3fa2da9178bc7bbc5faa4726992" style="width: 100.0%; height: 100.0%;">Tipo de Local: Via Pública<br>Data: 2024-03-07 00:00:00<br>Lat: -21.116901479<br>Lng: -47.786446719</div>`)[0];
+                popup_ef77f4b8a46486203b0e14b9991e294b.setContent(html_46f3d3fa2da9178bc7bbc5faa4726992);
+            
+        
+
+        marker_0e46151218ae05e6046e51812ba748b9.bindPopup(popup_ef77f4b8a46486203b0e14b9991e294b)
+        ;
+
+        
+    
+    
+            var marker_2185c5112252f4e03f76602dadaced2a = L.marker(
+                [-21.138347702, -47.825891074],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_24345a58896c0136d48ce4be7e439389 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_2185c5112252f4e03f76602dadaced2a.setIcon(icon_24345a58896c0136d48ce4be7e439389);
+        
+    
+        var popup_c0fff48e936db36c5cbee78fa87f0581 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8185eb8a9f3c38c9a52ed6651c40ee22 = $(`<div id="html_8185eb8a9f3c38c9a52ed6651c40ee22" style="width: 100.0%; height: 100.0%;">Tipo de Local: Via Pública<br>Data: 2024-03-15 00:00:00<br>Lat: -21.138347702<br>Lng: -47.825891074</div>`)[0];
+                popup_c0fff48e936db36c5cbee78fa87f0581.setContent(html_8185eb8a9f3c38c9a52ed6651c40ee22);
+            
+        
+
+        marker_2185c5112252f4e03f76602dadaced2a.bindPopup(popup_c0fff48e936db36c5cbee78fa87f0581)
+        ;
+
+        
+    
+    
+            var marker_061923324d761bc51da0d4e12c87f701 = L.marker(
+                [0.0, 0.0],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_a79ce9000078453ef3d76d2fd0009385 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_061923324d761bc51da0d4e12c87f701.setIcon(icon_a79ce9000078453ef3d76d2fd0009385);
+        
+    
+        var popup_0cc4f42785159d418cedb084750bd8da = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_079c2ab48112c263a62468c3efb2b7f2 = $(`<div id="html_079c2ab48112c263a62468c3efb2b7f2" style="width: 100.0%; height: 100.0%;">Tipo de Local: Residência<br>Data: 2024-03-16 00:00:00<br>Lat: 0.0<br>Lng: 0.0</div>`)[0];
+                popup_0cc4f42785159d418cedb084750bd8da.setContent(html_079c2ab48112c263a62468c3efb2b7f2);
+            
+        
+
+        marker_061923324d761bc51da0d4e12c87f701.bindPopup(popup_0cc4f42785159d418cedb084750bd8da)
+        ;
+
+        
+    
+    
+            var marker_a167d4e33200f54456dac6bc602d5093 = L.marker(
+                [0.0, 0.0],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_ffee1cbcf71c2db2ceea9f9264f72ad0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_a167d4e33200f54456dac6bc602d5093.setIcon(icon_ffee1cbcf71c2db2ceea9f9264f72ad0);
+        
+    
+        var popup_9d16600a198430b5030b8a4183bf9e32 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6d4f97e11522761e246c11597cdbd396 = $(`<div id="html_6d4f97e11522761e246c11597cdbd396" style="width: 100.0%; height: 100.0%;">Tipo de Local: Residência<br>Data: 2024-03-16 00:00:00<br>Lat: 0.0<br>Lng: 0.0</div>`)[0];
+                popup_9d16600a198430b5030b8a4183bf9e32.setContent(html_6d4f97e11522761e246c11597cdbd396);
+            
+        
+
+        marker_a167d4e33200f54456dac6bc602d5093.bindPopup(popup_9d16600a198430b5030b8a4183bf9e32)
+        ;
+
+        
+    
+    
+            var marker_e9f2f786d34b973485cd05331f62ee3b = L.marker(
+                [-21.23559533, -47.8389867929999],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_53d6f197a3f523c154aa5c9ce0757e00 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_e9f2f786d34b973485cd05331f62ee3b.setIcon(icon_53d6f197a3f523c154aa5c9ce0757e00);
+        
+    
+        var popup_bb9e965ae6c0cffcdd7d8d0e64070cfd = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_eee205a144efce0036057bc1ef3fa2a3 = $(`<div id="html_eee205a144efce0036057bc1ef3fa2a3" style="width: 100.0%; height: 100.0%;">Tipo de Local: Via Pública<br>Data: 2024-03-23 00:00:00<br>Lat: -21.23559533<br>Lng: -47.8389867929999</div>`)[0];
+                popup_bb9e965ae6c0cffcdd7d8d0e64070cfd.setContent(html_eee205a144efce0036057bc1ef3fa2a3);
+            
+        
+
+        marker_e9f2f786d34b973485cd05331f62ee3b.bindPopup(popup_bb9e965ae6c0cffcdd7d8d0e64070cfd)
+        ;
+
+        
+    
+    
+            var marker_0d663e43dcba27beeaa4b9169f996d81 = L.marker(
+                [-21.17395621, -47.8077521499999],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_dff48a629a8af9a35fa3e3b38233892d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_0d663e43dcba27beeaa4b9169f996d81.setIcon(icon_dff48a629a8af9a35fa3e3b38233892d);
+        
+    
+        var popup_c439a27e3d8c0071d752637a64bbf8de = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_66d2ae6f28e5ee2677a4cec3e38f6832 = $(`<div id="html_66d2ae6f28e5ee2677a4cec3e38f6832" style="width: 100.0%; height: 100.0%;">Tipo de Local: Via Pública<br>Data: 2024-04-26 00:00:00<br>Lat: -21.17395621<br>Lng: -47.8077521499999</div>`)[0];
+                popup_c439a27e3d8c0071d752637a64bbf8de.setContent(html_66d2ae6f28e5ee2677a4cec3e38f6832);
+            
+        
+
+        marker_0d663e43dcba27beeaa4b9169f996d81.bindPopup(popup_c439a27e3d8c0071d752637a64bbf8de)
+        ;
+
+        
+    
+    
+            var marker_208621720e6378cfb11d61a868bf2d53 = L.marker(
+                [-21.17395621, -47.8077521499999],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_68b9b809a9ebc58035a9ed69e5e9d078 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_208621720e6378cfb11d61a868bf2d53.setIcon(icon_68b9b809a9ebc58035a9ed69e5e9d078);
+        
+    
+        var popup_87a83f6bda7749fecfa9b16cd72661ef = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0bab5de8ef9f7190117e1aa58e1108c5 = $(`<div id="html_0bab5de8ef9f7190117e1aa58e1108c5" style="width: 100.0%; height: 100.0%;">Tipo de Local: Via Pública<br>Data: 2024-04-26 00:00:00<br>Lat: -21.17395621<br>Lng: -47.8077521499999</div>`)[0];
+                popup_87a83f6bda7749fecfa9b16cd72661ef.setContent(html_0bab5de8ef9f7190117e1aa58e1108c5);
+            
+        
+
+        marker_208621720e6378cfb11d61a868bf2d53.bindPopup(popup_87a83f6bda7749fecfa9b16cd72661ef)
+        ;
+
+        
+    
+    
+            var marker_1cbd12f5649a35e4897fb1bc2d9a6a9d = L.marker(
+                [-21.17104939, -47.810227899],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_100cf98ce75406247579ff30d2175fbb = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_1cbd12f5649a35e4897fb1bc2d9a6a9d.setIcon(icon_100cf98ce75406247579ff30d2175fbb);
+        
+    
+        var popup_7b527976dc634154a24db647d76ada7d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4cc22eadd2881a2f30a9c9aee6db76b7 = $(`<div id="html_4cc22eadd2881a2f30a9c9aee6db76b7" style="width: 100.0%; height: 100.0%;">Tipo de Local: Restaurante e Afins<br>Data: 2024-04-15 00:00:00<br>Lat: -21.17104939<br>Lng: -47.810227899</div>`)[0];
+                popup_7b527976dc634154a24db647d76ada7d.setContent(html_4cc22eadd2881a2f30a9c9aee6db76b7);
+            
+        
+
+        marker_1cbd12f5649a35e4897fb1bc2d9a6a9d.bindPopup(popup_7b527976dc634154a24db647d76ada7d)
+        ;
+
+        
+    
+    
+            var marker_b67fcd51073f2341a3dfc08588c8c6d9 = L.marker(
+                [-21.1781601, -47.806978],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_922beef6daba90203a0e7366fefade4c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_b67fcd51073f2341a3dfc08588c8c6d9.setIcon(icon_922beef6daba90203a0e7366fefade4c);
+        
+    
+        var popup_1fe583337cd5a98da03cfd10a7e2b292 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7c2d0be2c84d2e03e70a545580932c28 = $(`<div id="html_7c2d0be2c84d2e03e70a545580932c28" style="width: 100.0%; height: 100.0%;">Tipo de Local: Restaurante e Afins<br>Data: 2024-04-03 00:00:00<br>Lat: -21.1781601<br>Lng: -47.806978</div>`)[0];
+                popup_1fe583337cd5a98da03cfd10a7e2b292.setContent(html_7c2d0be2c84d2e03e70a545580932c28);
+            
+        
+
+        marker_b67fcd51073f2341a3dfc08588c8c6d9.bindPopup(popup_1fe583337cd5a98da03cfd10a7e2b292)
+        ;
+
+        
+    
+    
+            var marker_8794c25a1fb93183a79979fc94c7e318 = L.marker(
+                [0.0, 0.0],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_b66af50cb34387201eeb57917cf74479 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_8794c25a1fb93183a79979fc94c7e318.setIcon(icon_b66af50cb34387201eeb57917cf74479);
+        
+    
+        var popup_3931b47fa7e8464b7083519546794f09 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_10b3e993f9cc0b02cb43d1a332c0bc48 = $(`<div id="html_10b3e993f9cc0b02cb43d1a332c0bc48" style="width: 100.0%; height: 100.0%;">Tipo de Local: Condomínio Comercial<br>Data: 2024-04-09 00:00:00<br>Lat: 0.0<br>Lng: 0.0</div>`)[0];
+                popup_3931b47fa7e8464b7083519546794f09.setContent(html_10b3e993f9cc0b02cb43d1a332c0bc48);
+            
+        
+
+        marker_8794c25a1fb93183a79979fc94c7e318.bindPopup(popup_3931b47fa7e8464b7083519546794f09)
+        ;
+
+        
+    
+    
+            var marker_35c859b8a89e2e8abad24c765cb5b4b2 = L.marker(
+                [-21.1808482, -47.8111606],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_e476e3e8cb2afca0859b793534523050 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_35c859b8a89e2e8abad24c765cb5b4b2.setIcon(icon_e476e3e8cb2afca0859b793534523050);
+        
+    
+        var popup_36551df845f6f683dad2ac728c608d62 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9cc9195aa0d3bc17aa19528c73f468cf = $(`<div id="html_9cc9195aa0d3bc17aa19528c73f468cf" style="width: 100.0%; height: 100.0%;">Tipo de Local: Escritório<br>Data: 2024-04-28 00:00:00<br>Lat: -21.1808482<br>Lng: -47.8111606</div>`)[0];
+                popup_36551df845f6f683dad2ac728c608d62.setContent(html_9cc9195aa0d3bc17aa19528c73f468cf);
+            
+        
+
+        marker_35c859b8a89e2e8abad24c765cb5b4b2.bindPopup(popup_36551df845f6f683dad2ac728c608d62)
+        ;
+
+        
+    
+    
+            var marker_223d19ef9faacaac7db94da94c414e57 = L.marker(
+                [-21.1808482, -47.8111606],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_adbbf46a94de259e522d853509f4bcc9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_223d19ef9faacaac7db94da94c414e57.setIcon(icon_adbbf46a94de259e522d853509f4bcc9);
+        
+    
+        var popup_b835b7a30d936701065410247ef16ea3 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_33e11acce0a035f4984a6ec344f93a89 = $(`<div id="html_33e11acce0a035f4984a6ec344f93a89" style="width: 100.0%; height: 100.0%;">Tipo de Local: Escritório<br>Data: 2024-04-28 00:00:00<br>Lat: -21.1808482<br>Lng: -47.8111606</div>`)[0];
+                popup_b835b7a30d936701065410247ef16ea3.setContent(html_33e11acce0a035f4984a6ec344f93a89);
+            
+        
+
+        marker_223d19ef9faacaac7db94da94c414e57.bindPopup(popup_b835b7a30d936701065410247ef16ea3)
+        ;
+
+        
+    
+    
+            var marker_b5d3f18c03d75a049c88b81fa0e5b258 = L.marker(
+                [-21.1808482, -47.8111606],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_ddf21689614aabd73373fc8d9007a2a1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_b5d3f18c03d75a049c88b81fa0e5b258.setIcon(icon_ddf21689614aabd73373fc8d9007a2a1);
+        
+    
+        var popup_65e5d674b518742d903b11d45cf20b5c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_eb03d9c88848d3856ba01cd81f2b856a = $(`<div id="html_eb03d9c88848d3856ba01cd81f2b856a" style="width: 100.0%; height: 100.0%;">Tipo de Local: Escritório<br>Data: 2024-04-28 00:00:00<br>Lat: -21.1808482<br>Lng: -47.8111606</div>`)[0];
+                popup_65e5d674b518742d903b11d45cf20b5c.setContent(html_eb03d9c88848d3856ba01cd81f2b856a);
+            
+        
+
+        marker_b5d3f18c03d75a049c88b81fa0e5b258.bindPopup(popup_65e5d674b518742d903b11d45cf20b5c)
+        ;
+
+        
+    
+    
+            var marker_8312e0b4957e6bd0588642b1a01410aa = L.marker(
+                [-21.1808482, -47.8111606],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_ce5829ace133ad1e13425d03fa3b3974 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_8312e0b4957e6bd0588642b1a01410aa.setIcon(icon_ce5829ace133ad1e13425d03fa3b3974);
+        
+    
+        var popup_b4e0a5f91278c5e40126c08128dc58a0 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0ee586473b7b193ed13b2b7843444202 = $(`<div id="html_0ee586473b7b193ed13b2b7843444202" style="width: 100.0%; height: 100.0%;">Tipo de Local: Escritório<br>Data: 2024-04-28 00:00:00<br>Lat: -21.1808482<br>Lng: -47.8111606</div>`)[0];
+                popup_b4e0a5f91278c5e40126c08128dc58a0.setContent(html_0ee586473b7b193ed13b2b7843444202);
+            
+        
+
+        marker_8312e0b4957e6bd0588642b1a01410aa.bindPopup(popup_b4e0a5f91278c5e40126c08128dc58a0)
+        ;
+
+        
+    
+    
+            var marker_4049cd2bcf117c14d7322b9c48d1816c = L.marker(
+                [-21.165944892, -47.812412203],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_b5ca8e7c43993c80f4f4f1bf92d26fa4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_4049cd2bcf117c14d7322b9c48d1816c.setIcon(icon_b5ca8e7c43993c80f4f4f1bf92d26fa4);
+        
+    
+        var popup_f3e87cedc6bb7e5a57566192a667fe51 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_fe25076b9f9696e7cc1651374cd92d38 = $(`<div id="html_fe25076b9f9696e7cc1651374cd92d38" style="width: 100.0%; height: 100.0%;">Tipo de Local: Via Pública<br>Data: 2024-04-08 00:00:00<br>Lat: -21.165944892<br>Lng: -47.812412203</div>`)[0];
+                popup_f3e87cedc6bb7e5a57566192a667fe51.setContent(html_fe25076b9f9696e7cc1651374cd92d38);
+            
+        
+
+        marker_4049cd2bcf117c14d7322b9c48d1816c.bindPopup(popup_f3e87cedc6bb7e5a57566192a667fe51)
+        ;
+
+        
+    
+    
+            var marker_0fefa563a121e704ef94cd1b6b977f24 = L.marker(
+                [-21.13400667, -47.783547578],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_ed72580dcf3803814cd335daaff6d9de = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_0fefa563a121e704ef94cd1b6b977f24.setIcon(icon_ed72580dcf3803814cd335daaff6d9de);
+        
+    
+        var popup_a9371d9d39d714a9fe0fe2f07ab39f3d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_fc130600823be5f4f565835220bcbe4b = $(`<div id="html_fc130600823be5f4f565835220bcbe4b" style="width: 100.0%; height: 100.0%;">Tipo de Local: Via Pública<br>Data: 2024-03-31 00:00:00<br>Lat: -21.13400667<br>Lng: -47.783547578</div>`)[0];
+                popup_a9371d9d39d714a9fe0fe2f07ab39f3d.setContent(html_fc130600823be5f4f565835220bcbe4b);
+            
+        
+
+        marker_0fefa563a121e704ef94cd1b6b977f24.bindPopup(popup_a9371d9d39d714a9fe0fe2f07ab39f3d)
+        ;
+
+        
+    
+    
+            var marker_04eac77cc5d6988d22c3fd1ea86cf1fc = L.marker(
+                [-21.161675, -47.8010094],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_393d64f121fcfd190329011cdd44dab6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_04eac77cc5d6988d22c3fd1ea86cf1fc.setIcon(icon_393d64f121fcfd190329011cdd44dab6);
+        
+    
+        var popup_10f38369852609e27eb23376fdf4a852 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_002d5fd287eb4b0e911a1779b732e6a6 = $(`<div id="html_002d5fd287eb4b0e911a1779b732e6a6" style="width: 100.0%; height: 100.0%;">Tipo de Local: Via Pública<br>Data: 2024-04-03 00:00:00<br>Lat: -21.161675<br>Lng: -47.8010094</div>`)[0];
+                popup_10f38369852609e27eb23376fdf4a852.setContent(html_002d5fd287eb4b0e911a1779b732e6a6);
+            
+        
+
+        marker_04eac77cc5d6988d22c3fd1ea86cf1fc.bindPopup(popup_10f38369852609e27eb23376fdf4a852)
+        ;
+
+        
+    
+    
+            var marker_56c0e6279e4f9ecde06005992476dd6b = L.marker(
+                [-21.161675, -47.8010094],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_5a176901c687a74b44aa8b3794bffe22 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_56c0e6279e4f9ecde06005992476dd6b.setIcon(icon_5a176901c687a74b44aa8b3794bffe22);
+        
+    
+        var popup_7d288b8a7d4b77fefd0ec6d8a0f45120 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4d668a8d3cb83898b5e18527eb7a4b5b = $(`<div id="html_4d668a8d3cb83898b5e18527eb7a4b5b" style="width: 100.0%; height: 100.0%;">Tipo de Local: Terminal/Estação<br>Data: 2024-04-16 00:00:00<br>Lat: -21.161675<br>Lng: -47.8010094</div>`)[0];
+                popup_7d288b8a7d4b77fefd0ec6d8a0f45120.setContent(html_4d668a8d3cb83898b5e18527eb7a4b5b);
+            
+        
+
+        marker_56c0e6279e4f9ecde06005992476dd6b.bindPopup(popup_7d288b8a7d4b77fefd0ec6d8a0f45120)
+        ;
+
+        
+    
+    
+            var marker_7644c9c9d25938f435910f15dd707f1a = L.marker(
+                [-21.135771012, -47.770024373],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_8abfb7b89eae05de29d4881c1bfe8951 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_7644c9c9d25938f435910f15dd707f1a.setIcon(icon_8abfb7b89eae05de29d4881c1bfe8951);
+        
+    
+        var popup_485c4ce1aa647cd34d86f6d7fb27aab4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a43eccf1b204cacabfc4a4a2f3a9b75d = $(`<div id="html_a43eccf1b204cacabfc4a4a2f3a9b75d" style="width: 100.0%; height: 100.0%;">Tipo de Local: Via Pública<br>Data: 2024-04-21 00:00:00<br>Lat: -21.135771012<br>Lng: -47.770024373</div>`)[0];
+                popup_485c4ce1aa647cd34d86f6d7fb27aab4.setContent(html_a43eccf1b204cacabfc4a4a2f3a9b75d);
+            
+        
+
+        marker_7644c9c9d25938f435910f15dd707f1a.bindPopup(popup_485c4ce1aa647cd34d86f6d7fb27aab4)
+        ;
+
+        
+    
+    
+            var marker_4fc373729b7a8bb185baf2ba966a2c85 = L.marker(
+                [-21.135771012, -47.770024373],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_f1364ab4edc82a50814cf72c49dac3ab = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_4fc373729b7a8bb185baf2ba966a2c85.setIcon(icon_f1364ab4edc82a50814cf72c49dac3ab);
+        
+    
+        var popup_70cf9703e7e0787a75586d39bd8132c8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f44cdc3c6654c20083d5ee66ae4ed6fc = $(`<div id="html_f44cdc3c6654c20083d5ee66ae4ed6fc" style="width: 100.0%; height: 100.0%;">Tipo de Local: Via Pública<br>Data: 2024-04-21 00:00:00<br>Lat: -21.135771012<br>Lng: -47.770024373</div>`)[0];
+                popup_70cf9703e7e0787a75586d39bd8132c8.setContent(html_f44cdc3c6654c20083d5ee66ae4ed6fc);
+            
+        
+
+        marker_4fc373729b7a8bb185baf2ba966a2c85.bindPopup(popup_70cf9703e7e0787a75586d39bd8132c8)
+        ;
+
+        
+    
+    
+            var marker_d63cd43549c67ab23c54b0e44bed8490 = L.marker(
+                [-21.1625025559999, -47.7970022119999],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_5afcb9da312db2e5b2919507cb2f034c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_d63cd43549c67ab23c54b0e44bed8490.setIcon(icon_5afcb9da312db2e5b2919507cb2f034c);
+        
+    
+        var popup_e0b6e0c124fad5bc13ac7d39c7697dc8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_44993b43f2badd8a7a1d4a44190a355e = $(`<div id="html_44993b43f2badd8a7a1d4a44190a355e" style="width: 100.0%; height: 100.0%;">Tipo de Local: Comércio e Serviços<br>Data: 2024-04-24 00:00:00<br>Lat: -21.1625025559999<br>Lng: -47.7970022119999</div>`)[0];
+                popup_e0b6e0c124fad5bc13ac7d39c7697dc8.setContent(html_44993b43f2badd8a7a1d4a44190a355e);
+            
+        
+
+        marker_d63cd43549c67ab23c54b0e44bed8490.bindPopup(popup_e0b6e0c124fad5bc13ac7d39c7697dc8)
+        ;
+
+        
+    
+    
+            var marker_b972bdd8a410da76640e9fa70f8f782e = L.marker(
+                [0.0, 0.0],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_4dbc049f9534f44be823d6864241dfd2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_b972bdd8a410da76640e9fa70f8f782e.setIcon(icon_4dbc049f9534f44be823d6864241dfd2);
+        
+    
+        var popup_a9478c01792a0aa971a0dd99cfefe524 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_810abe030aa300204ff3789b5d271e96 = $(`<div id="html_810abe030aa300204ff3789b5d271e96" style="width: 100.0%; height: 100.0%;">Tipo de Local: Residência<br>Data: 2024-04-25 00:00:00<br>Lat: 0.0<br>Lng: 0.0</div>`)[0];
+                popup_a9478c01792a0aa971a0dd99cfefe524.setContent(html_810abe030aa300204ff3789b5d271e96);
+            
+        
+
+        marker_b972bdd8a410da76640e9fa70f8f782e.bindPopup(popup_a9478c01792a0aa971a0dd99cfefe524)
+        ;
+
+        
+    
+    
+            var marker_c2378bea851100aaaa8182dcd85370df = L.marker(
+                [0.0, 0.0],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_674b99b31563408b0301e09e8bb6a432 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_c2378bea851100aaaa8182dcd85370df.setIcon(icon_674b99b31563408b0301e09e8bb6a432);
+        
+    
+        var popup_fc369b1d5406d5fe9f497e6ed21af994 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7229508c5127de7d289897e956c0a12e = $(`<div id="html_7229508c5127de7d289897e956c0a12e" style="width: 100.0%; height: 100.0%;">Tipo de Local: Residência<br>Data: 2024-04-25 00:00:00<br>Lat: 0.0<br>Lng: 0.0</div>`)[0];
+                popup_fc369b1d5406d5fe9f497e6ed21af994.setContent(html_7229508c5127de7d289897e956c0a12e);
+            
+        
+
+        marker_c2378bea851100aaaa8182dcd85370df.bindPopup(popup_fc369b1d5406d5fe9f497e6ed21af994)
+        ;
+
+        
+    
+    
+            var marker_c3c6c58fc7d875eb86c90b330674bfba = L.marker(
+                [-21.168660024409, -47.7981946792273],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_507076e0eb5f995f7f52f7ddbfc6f4ab = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_c3c6c58fc7d875eb86c90b330674bfba.setIcon(icon_507076e0eb5f995f7f52f7ddbfc6f4ab);
+        
+    
+        var popup_60a0fc3aa677e30951b49d5c2f81fecf = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d7f6faca4248748b1bb18ad1e03cfc7d = $(`<div id="html_d7f6faca4248748b1bb18ad1e03cfc7d" style="width: 100.0%; height: 100.0%;">Tipo de Local: Via Pública<br>Data: 2024-04-04 00:00:00<br>Lat: -21.168660024409<br>Lng: -47.7981946792273</div>`)[0];
+                popup_60a0fc3aa677e30951b49d5c2f81fecf.setContent(html_d7f6faca4248748b1bb18ad1e03cfc7d);
+            
+        
+
+        marker_c3c6c58fc7d875eb86c90b330674bfba.bindPopup(popup_60a0fc3aa677e30951b49d5c2f81fecf)
+        ;
+
+        
+    
+    
+            var marker_83c7400c4788538b132b8036ef5b46df = L.marker(
+                [-21.1603748, -47.7981292],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_61e8a07d006af80e9e01b60f707a6d77 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_83c7400c4788538b132b8036ef5b46df.setIcon(icon_61e8a07d006af80e9e01b60f707a6d77);
+        
+    
+        var popup_b8047ad0d161f62381fc6e11d181f4c4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_84c4af5b1b40d2e12de4a1db0bea4306 = $(`<div id="html_84c4af5b1b40d2e12de4a1db0bea4306" style="width: 100.0%; height: 100.0%;">Tipo de Local: Via Pública<br>Data: 2024-04-04 00:00:00<br>Lat: -21.1603748<br>Lng: -47.7981292</div>`)[0];
+                popup_b8047ad0d161f62381fc6e11d181f4c4.setContent(html_84c4af5b1b40d2e12de4a1db0bea4306);
+            
+        
+
+        marker_83c7400c4788538b132b8036ef5b46df.bindPopup(popup_b8047ad0d161f62381fc6e11d181f4c4)
+        ;
+
+        
+    
+    
+            var marker_dceaef771b9f8a3dc6491ae450f0971d = L.marker(
+                [-21.1551184863191, -47.7966314305957],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_630025faf78edbaae57fcc17446db0d7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_dceaef771b9f8a3dc6491ae450f0971d.setIcon(icon_630025faf78edbaae57fcc17446db0d7);
+        
+    
+        var popup_bff5b976aeb022b93564480263ea387c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_633e7fe9c968f1819d1ab4f914e2baf8 = $(`<div id="html_633e7fe9c968f1819d1ab4f914e2baf8" style="width: 100.0%; height: 100.0%;">Tipo de Local: Via Pública<br>Data: 2024-04-02 00:00:00<br>Lat: -21.1551184863191<br>Lng: -47.7966314305957</div>`)[0];
+                popup_bff5b976aeb022b93564480263ea387c.setContent(html_633e7fe9c968f1819d1ab4f914e2baf8);
+            
+        
+
+        marker_dceaef771b9f8a3dc6491ae450f0971d.bindPopup(popup_bff5b976aeb022b93564480263ea387c)
+        ;
+
+        
+    
+    
+            var marker_90c00f66b74b4a1deef20b8083bf3ba0 = L.marker(
+                [0.0, 0.0],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_e6ded6879e5bb7f85bb8ad13715bd576 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_90c00f66b74b4a1deef20b8083bf3ba0.setIcon(icon_e6ded6879e5bb7f85bb8ad13715bd576);
+        
+    
+        var popup_1b953462d7049fb2c689e5c38be18a3d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0b1ec3616a3675e8cc5d8acfea0c0e7b = $(`<div id="html_0b1ec3616a3675e8cc5d8acfea0c0e7b" style="width: 100.0%; height: 100.0%;">Tipo de Local: Residência<br>Data: 2024-04-25 00:00:00<br>Lat: 0.0<br>Lng: 0.0</div>`)[0];
+                popup_1b953462d7049fb2c689e5c38be18a3d.setContent(html_0b1ec3616a3675e8cc5d8acfea0c0e7b);
+            
+        
+
+        marker_90c00f66b74b4a1deef20b8083bf3ba0.bindPopup(popup_1b953462d7049fb2c689e5c38be18a3d)
+        ;
+
+        
+    
+    
+            var marker_1e28ff61aae24a8ff8091cb75958926b = L.marker(
+                [0.0, 0.0],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_7d170806e590d4c0f88c29456b5835a8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_1e28ff61aae24a8ff8091cb75958926b.setIcon(icon_7d170806e590d4c0f88c29456b5835a8);
+        
+    
+        var popup_2cd89f407e8e0891b40db895fa9b51c6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ca8f895b7722a48e881a39f49d42b00f = $(`<div id="html_ca8f895b7722a48e881a39f49d42b00f" style="width: 100.0%; height: 100.0%;">Tipo de Local: Residência<br>Data: 2024-04-25 00:00:00<br>Lat: 0.0<br>Lng: 0.0</div>`)[0];
+                popup_2cd89f407e8e0891b40db895fa9b51c6.setContent(html_ca8f895b7722a48e881a39f49d42b00f);
+            
+        
+
+        marker_1e28ff61aae24a8ff8091cb75958926b.bindPopup(popup_2cd89f407e8e0891b40db895fa9b51c6)
+        ;
+
+        
+    
+    
+            var marker_cd8b9f107de3fc6c882b048ba8d581b4 = L.marker(
+                [-21.17248377872, -47.81818939504],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_2797c22e0c26b026f5e515f17c99eacd = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_cd8b9f107de3fc6c882b048ba8d581b4.setIcon(icon_2797c22e0c26b026f5e515f17c99eacd);
+        
+    
+        var popup_b7356046b8343b1a1f4cf8cb5af5ef75 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_bea93b48d23288f978b89b8b3f02b958 = $(`<div id="html_bea93b48d23288f978b89b8b3f02b958" style="width: 100.0%; height: 100.0%;">Tipo de Local: Via Pública<br>Data: 2024-04-22 00:00:00<br>Lat: -21.17248377872<br>Lng: -47.81818939504</div>`)[0];
+                popup_b7356046b8343b1a1f4cf8cb5af5ef75.setContent(html_bea93b48d23288f978b89b8b3f02b958);
+            
+        
+
+        marker_cd8b9f107de3fc6c882b048ba8d581b4.bindPopup(popup_b7356046b8343b1a1f4cf8cb5af5ef75)
+        ;
+
+        
+    
+    
+            var marker_928929b7c5e0b208fb6be24911c8ac08 = L.marker(
+                [-21.176609325, -47.8152442849999],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_400b31a49eb97f4e8cb475fc388f5b2a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_928929b7c5e0b208fb6be24911c8ac08.setIcon(icon_400b31a49eb97f4e8cb475fc388f5b2a);
+        
+    
+        var popup_6ed1fcd6541eb5c4f5bb028ac4a62128 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_00b80d8da0795db5bae0fe06d19b2af0 = $(`<div id="html_00b80d8da0795db5bae0fe06d19b2af0" style="width: 100.0%; height: 100.0%;">Tipo de Local: Via Pública<br>Data: 2024-04-22 00:00:00<br>Lat: -21.176609325<br>Lng: -47.8152442849999</div>`)[0];
+                popup_6ed1fcd6541eb5c4f5bb028ac4a62128.setContent(html_00b80d8da0795db5bae0fe06d19b2af0);
+            
+        
+
+        marker_928929b7c5e0b208fb6be24911c8ac08.bindPopup(popup_6ed1fcd6541eb5c4f5bb028ac4a62128)
+        ;
+
+        
+    
+    
+            var marker_fe7a0d45e6fd4d01662bd876b46b2ac4 = L.marker(
+                [-21.1566545049999, -47.831933659],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_72488fda87b76f7341d50901b2d1207e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_fe7a0d45e6fd4d01662bd876b46b2ac4.setIcon(icon_72488fda87b76f7341d50901b2d1207e);
+        
+    
+        var popup_ca67a28b5cf8d6670280ce67cc1c76d1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_973d533fc8d95e32d6ae4780aab021bc = $(`<div id="html_973d533fc8d95e32d6ae4780aab021bc" style="width: 100.0%; height: 100.0%;">Tipo de Local: Via Pública<br>Data: 2024-04-25 00:00:00<br>Lat: -21.1566545049999<br>Lng: -47.831933659</div>`)[0];
+                popup_ca67a28b5cf8d6670280ce67cc1c76d1.setContent(html_973d533fc8d95e32d6ae4780aab021bc);
+            
+        
+
+        marker_fe7a0d45e6fd4d01662bd876b46b2ac4.bindPopup(popup_ca67a28b5cf8d6670280ce67cc1c76d1)
+        ;
+
+        
+    
+    
+            var marker_0e0ec18a283778011a9251c676f372a1 = L.marker(
+                [0.0, 0.0],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_10ec2fe7732c40c1ff62faf13d4dfb66 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_0e0ec18a283778011a9251c676f372a1.setIcon(icon_10ec2fe7732c40c1ff62faf13d4dfb66);
+        
+    
+        var popup_990703856c91de01a12eb8c2604dc3b1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4f822833fed71a2601505ce088afbb55 = $(`<div id="html_4f822833fed71a2601505ce088afbb55" style="width: 100.0%; height: 100.0%;">Tipo de Local: Residência<br>Data: 2024-04-03 00:00:00<br>Lat: 0.0<br>Lng: 0.0</div>`)[0];
+                popup_990703856c91de01a12eb8c2604dc3b1.setContent(html_4f822833fed71a2601505ce088afbb55);
+            
+        
+
+        marker_0e0ec18a283778011a9251c676f372a1.bindPopup(popup_990703856c91de01a12eb8c2604dc3b1)
+        ;
+
+        
+    
+    
+            var marker_7e8344f342c871c607c1072a5d04014d = L.marker(
+                [0.0, 0.0],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_7f2a6cb06bfd6348811e897b2d984ec6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_7e8344f342c871c607c1072a5d04014d.setIcon(icon_7f2a6cb06bfd6348811e897b2d984ec6);
+        
+    
+        var popup_8629a4c2724b18cfe8e2d8e91f09b6da = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_639903d455503e2bae510bc1873931f8 = $(`<div id="html_639903d455503e2bae510bc1873931f8" style="width: 100.0%; height: 100.0%;">Tipo de Local: Residência<br>Data: 2024-04-03 00:00:00<br>Lat: 0.0<br>Lng: 0.0</div>`)[0];
+                popup_8629a4c2724b18cfe8e2d8e91f09b6da.setContent(html_639903d455503e2bae510bc1873931f8);
+            
+        
+
+        marker_7e8344f342c871c607c1072a5d04014d.bindPopup(popup_8629a4c2724b18cfe8e2d8e91f09b6da)
+        ;
+
+        
+    
+    
+            var marker_9e913f906762ce69d746e345d11412ad = L.marker(
+                [-21.209245, -47.809508],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_2150b33ff143f39cd64a0dbd89c9954d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_9e913f906762ce69d746e345d11412ad.setIcon(icon_2150b33ff143f39cd64a0dbd89c9954d);
+        
+    
+        var popup_989b1e855342fae01dbc9c2b26b9eb91 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8eb916f690338f176d6123a4f8f7570e = $(`<div id="html_8eb916f690338f176d6123a4f8f7570e" style="width: 100.0%; height: 100.0%;">Tipo de Local: Via Pública<br>Data: 2024-04-01 00:00:00<br>Lat: -21.209245<br>Lng: -47.809508</div>`)[0];
+                popup_989b1e855342fae01dbc9c2b26b9eb91.setContent(html_8eb916f690338f176d6123a4f8f7570e);
+            
+        
+
+        marker_9e913f906762ce69d746e345d11412ad.bindPopup(popup_989b1e855342fae01dbc9c2b26b9eb91)
+        ;
+
+        
+    
+    
+            var marker_49bfe48fe6cb3d9adf534b0971cfa7ca = L.marker(
+                [-21.202978929, -47.767955479],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_b32a7b69ecf53fbcba20115f1e5581bd = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_49bfe48fe6cb3d9adf534b0971cfa7ca.setIcon(icon_b32a7b69ecf53fbcba20115f1e5581bd);
+        
+    
+        var popup_8616ce57ac0dc4b630202a1d8d2e8b7b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_fc6aed50dd24a5849578e67734d4030c = $(`<div id="html_fc6aed50dd24a5849578e67734d4030c" style="width: 100.0%; height: 100.0%;">Tipo de Local: Via Pública<br>Data: 2024-03-31 00:00:00<br>Lat: -21.202978929<br>Lng: -47.767955479</div>`)[0];
+                popup_8616ce57ac0dc4b630202a1d8d2e8b7b.setContent(html_fc6aed50dd24a5849578e67734d4030c);
+            
+        
+
+        marker_49bfe48fe6cb3d9adf534b0971cfa7ca.bindPopup(popup_8616ce57ac0dc4b630202a1d8d2e8b7b)
+        ;
+
+        
+    
+    
+            var marker_e09bcd206bc8949872fcba7cec6791b8 = L.marker(
+                [-21.1545417257358, -47.8192463709433],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_5ceb0515a77ec8fa67ba26dd4f940a0d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_e09bcd206bc8949872fcba7cec6791b8.setIcon(icon_5ceb0515a77ec8fa67ba26dd4f940a0d);
+        
+    
+        var popup_f7193ab457bceae6929e1fdff324ec78 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e425972144c62ff5663501bc6a8ac2fa = $(`<div id="html_e425972144c62ff5663501bc6a8ac2fa" style="width: 100.0%; height: 100.0%;">Tipo de Local: Via Pública<br>Data: 2024-04-01 00:00:00<br>Lat: -21.1545417257358<br>Lng: -47.8192463709433</div>`)[0];
+                popup_f7193ab457bceae6929e1fdff324ec78.setContent(html_e425972144c62ff5663501bc6a8ac2fa);
+            
+        
+
+        marker_e09bcd206bc8949872fcba7cec6791b8.bindPopup(popup_f7193ab457bceae6929e1fdff324ec78)
+        ;
+
+        
+    
+    
+            var marker_d73f14cd685c066920d81a9f8e85bd2c = L.marker(
+                [-21.1251425448277, -47.8258255292694],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_691a96349e3270ecc087759fbf90a76f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_d73f14cd685c066920d81a9f8e85bd2c.setIcon(icon_691a96349e3270ecc087759fbf90a76f);
+        
+    
+        var popup_1e0a2d65be2fce1050bca0b160cbea13 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e88ee67dc84e0d44b82997c28707d446 = $(`<div id="html_e88ee67dc84e0d44b82997c28707d446" style="width: 100.0%; height: 100.0%;">Tipo de Local: nan<br>Data: 2024-04-20 00:00:00<br>Lat: -21.1251425448277<br>Lng: -47.8258255292694</div>`)[0];
+                popup_1e0a2d65be2fce1050bca0b160cbea13.setContent(html_e88ee67dc84e0d44b82997c28707d446);
+            
+        
+
+        marker_d73f14cd685c066920d81a9f8e85bd2c.bindPopup(popup_1e0a2d65be2fce1050bca0b160cbea13)
+        ;
+
+        
+    
+    
+            var marker_6b2e8fb645fdec07758455d86afbfafa = L.marker(
+                [-21.1251425448277, -47.8258255292694],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_2a604432c620cad61871461eb1e22c09 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_6b2e8fb645fdec07758455d86afbfafa.setIcon(icon_2a604432c620cad61871461eb1e22c09);
+        
+    
+        var popup_9f6068835883dcb29ffb5cde625f772f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f53fbe2c748dfada89c4c86cbfdcb19d = $(`<div id="html_f53fbe2c748dfada89c4c86cbfdcb19d" style="width: 100.0%; height: 100.0%;">Tipo de Local: nan<br>Data: 2024-04-20 00:00:00<br>Lat: -21.1251425448277<br>Lng: -47.8258255292694</div>`)[0];
+                popup_9f6068835883dcb29ffb5cde625f772f.setContent(html_f53fbe2c748dfada89c4c86cbfdcb19d);
+            
+        
+
+        marker_6b2e8fb645fdec07758455d86afbfafa.bindPopup(popup_9f6068835883dcb29ffb5cde625f772f)
+        ;
+
+        
+    
+    
+            var marker_8c0c2d6090eb480047dd00f68761407f = L.marker(
+                [-21.1251425448277, -47.8258255292694],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_9501430ba872624eede7aac47c05a5a8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_8c0c2d6090eb480047dd00f68761407f.setIcon(icon_9501430ba872624eede7aac47c05a5a8);
+        
+    
+        var popup_17a1fb0063eb9a89da4a57f9668fec8d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_104016e638473ca25ad47cbd9ffcf94b = $(`<div id="html_104016e638473ca25ad47cbd9ffcf94b" style="width: 100.0%; height: 100.0%;">Tipo de Local: nan<br>Data: 2024-04-20 00:00:00<br>Lat: -21.1251425448277<br>Lng: -47.8258255292694</div>`)[0];
+                popup_17a1fb0063eb9a89da4a57f9668fec8d.setContent(html_104016e638473ca25ad47cbd9ffcf94b);
+            
+        
+
+        marker_8c0c2d6090eb480047dd00f68761407f.bindPopup(popup_17a1fb0063eb9a89da4a57f9668fec8d)
+        ;
+
+        
+    
+    
+            var marker_cc840f4efdb58de3a6031808c7dbdef6 = L.marker(
+                [-21.1297078857894, -47.8216795871578],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_0233f0156e6847e674937834242e25df = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_cc840f4efdb58de3a6031808c7dbdef6.setIcon(icon_0233f0156e6847e674937834242e25df);
+        
+    
+        var popup_62a426d3ebbd0c43e1fe2b805d08563d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a3d854cbf83ff675045ef57eef54f17d = $(`<div id="html_a3d854cbf83ff675045ef57eef54f17d" style="width: 100.0%; height: 100.0%;">Tipo de Local: Via Pública<br>Data: 2024-04-17 00:00:00<br>Lat: -21.1297078857894<br>Lng: -47.8216795871578</div>`)[0];
+                popup_62a426d3ebbd0c43e1fe2b805d08563d.setContent(html_a3d854cbf83ff675045ef57eef54f17d);
+            
+        
+
+        marker_cc840f4efdb58de3a6031808c7dbdef6.bindPopup(popup_62a426d3ebbd0c43e1fe2b805d08563d)
+        ;
+
+        
+    
+    
+            var marker_55adcdda6f86119b52221895282c9c91 = L.marker(
+                [-21.1413832, -47.8302019],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_945bf30e11b9c8969d98341c2ea4eaf0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_55adcdda6f86119b52221895282c9c91.setIcon(icon_945bf30e11b9c8969d98341c2ea4eaf0);
+        
+    
+        var popup_96297dd5e7fa1106f19980a0d441d23f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1b1367b6675378c4abfd77356b5ef59e = $(`<div id="html_1b1367b6675378c4abfd77356b5ef59e" style="width: 100.0%; height: 100.0%;">Tipo de Local: Comércio e Serviços<br>Data: 2024-04-16 00:00:00<br>Lat: -21.1413832<br>Lng: -47.8302019</div>`)[0];
+                popup_96297dd5e7fa1106f19980a0d441d23f.setContent(html_1b1367b6675378c4abfd77356b5ef59e);
+            
+        
+
+        marker_55adcdda6f86119b52221895282c9c91.bindPopup(popup_96297dd5e7fa1106f19980a0d441d23f)
+        ;
+
+        
+    
+    
+            var marker_2931f3528005b29b9ca8f437488836e9 = L.marker(
+                [-21.1413832, -47.8302019],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_fab439a4dc2d8924ccd653d9d4efca2c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_2931f3528005b29b9ca8f437488836e9.setIcon(icon_fab439a4dc2d8924ccd653d9d4efca2c);
+        
+    
+        var popup_21ec91f97fd758643b144de927755575 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_bd0362149ff97e8b1de017004103ce0d = $(`<div id="html_bd0362149ff97e8b1de017004103ce0d" style="width: 100.0%; height: 100.0%;">Tipo de Local: Comércio e Serviços<br>Data: 2024-04-16 00:00:00<br>Lat: -21.1413832<br>Lng: -47.8302019</div>`)[0];
+                popup_21ec91f97fd758643b144de927755575.setContent(html_bd0362149ff97e8b1de017004103ce0d);
+            
+        
+
+        marker_2931f3528005b29b9ca8f437488836e9.bindPopup(popup_21ec91f97fd758643b144de927755575)
+        ;
+
+        
+    
+    
+            var marker_58d64aa7dd799877ddbfa7f8b15861b5 = L.marker(
+                [-21.2352827, -47.8385631],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_aa694ccff40559bdb9bb00df29bdcf60 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_58d64aa7dd799877ddbfa7f8b15861b5.setIcon(icon_aa694ccff40559bdb9bb00df29bdcf60);
+        
+    
+        var popup_8fa3ad781e8b8ae092c8e7c893ef4f46 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_67877fae4080dbe0caeeeb28cbb60539 = $(`<div id="html_67877fae4080dbe0caeeeb28cbb60539" style="width: 100.0%; height: 100.0%;">Tipo de Local: Via Pública<br>Data: 2024-04-14 00:00:00<br>Lat: -21.2352827<br>Lng: -47.8385631</div>`)[0];
+                popup_8fa3ad781e8b8ae092c8e7c893ef4f46.setContent(html_67877fae4080dbe0caeeeb28cbb60539);
+            
+        
+
+        marker_58d64aa7dd799877ddbfa7f8b15861b5.bindPopup(popup_8fa3ad781e8b8ae092c8e7c893ef4f46)
+        ;
+
+        
+    
+    
+            var marker_2aa290b8244e7d59eb2d395c350cbc74 = L.marker(
+                [-21.1936807509999, -47.757214613],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_495ad75b9e234a4ea0d4595b61b1ad3a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_2aa290b8244e7d59eb2d395c350cbc74.setIcon(icon_495ad75b9e234a4ea0d4595b61b1ad3a);
+        
+    
+        var popup_72189de50984fb0f35899b51c5de53a0 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8b4368aa3528c8c144902cf173aacd84 = $(`<div id="html_8b4368aa3528c8c144902cf173aacd84" style="width: 100.0%; height: 100.0%;">Tipo de Local: Via Pública<br>Data: 2024-04-12 00:00:00<br>Lat: -21.1936807509999<br>Lng: -47.757214613</div>`)[0];
+                popup_72189de50984fb0f35899b51c5de53a0.setContent(html_8b4368aa3528c8c144902cf173aacd84);
+            
+        
+
+        marker_2aa290b8244e7d59eb2d395c350cbc74.bindPopup(popup_72189de50984fb0f35899b51c5de53a0)
+        ;
+
+        
+    
+    
+            var marker_4ee062f32379d00bae69f794bc903e69 = L.marker(
+                [0.0, 0.0],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_09491226c55aed992fc324fb0db48ae0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_4ee062f32379d00bae69f794bc903e69.setIcon(icon_09491226c55aed992fc324fb0db48ae0);
+        
+    
+        var popup_de63958fdc32aa8ae962fb68db4e84f9 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_97b09f564c1a00eee64601734afa70fd = $(`<div id="html_97b09f564c1a00eee64601734afa70fd" style="width: 100.0%; height: 100.0%;">Tipo de Local: Residência<br>Data: 2024-04-05 00:00:00<br>Lat: 0.0<br>Lng: 0.0</div>`)[0];
+                popup_de63958fdc32aa8ae962fb68db4e84f9.setContent(html_97b09f564c1a00eee64601734afa70fd);
+            
+        
+
+        marker_4ee062f32379d00bae69f794bc903e69.bindPopup(popup_de63958fdc32aa8ae962fb68db4e84f9)
+        ;
+
+        
+    
+    
+            var marker_d208ad64481164174c2dce1a67d2b037 = L.marker(
+                [-21.1707997, -47.7219447],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_958988dc81ea2d1f54135165bd3fa508 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_d208ad64481164174c2dce1a67d2b037.setIcon(icon_958988dc81ea2d1f54135165bd3fa508);
+        
+    
+        var popup_2d64ba1da4def9e2826931f87adbd921 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_63b561581ff4826b9935db089b437fc3 = $(`<div id="html_63b561581ff4826b9935db089b437fc3" style="width: 100.0%; height: 100.0%;">Tipo de Local: Area não Ocupada<br>Data: 2024-04-16 00:00:00<br>Lat: -21.1707997<br>Lng: -47.7219447</div>`)[0];
+                popup_2d64ba1da4def9e2826931f87adbd921.setContent(html_63b561581ff4826b9935db089b437fc3);
+            
+        
+
+        marker_d208ad64481164174c2dce1a67d2b037.bindPopup(popup_2d64ba1da4def9e2826931f87adbd921)
+        ;
+
+        
+    
+    
+            var marker_843f558564bc79ec26e3b7a353c67efd = L.marker(
+                [-21.1707997, -47.7219447],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_09313b75dc590ca2be714de8b98da8e8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_843f558564bc79ec26e3b7a353c67efd.setIcon(icon_09313b75dc590ca2be714de8b98da8e8);
+        
+    
+        var popup_ceaa74c436f9ee83d499523795cac738 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8cbd9489c90a818e3ce6281e47344a0a = $(`<div id="html_8cbd9489c90a818e3ce6281e47344a0a" style="width: 100.0%; height: 100.0%;">Tipo de Local: Area não Ocupada<br>Data: 2024-04-16 00:00:00<br>Lat: -21.1707997<br>Lng: -47.7219447</div>`)[0];
+                popup_ceaa74c436f9ee83d499523795cac738.setContent(html_8cbd9489c90a818e3ce6281e47344a0a);
+            
+        
+
+        marker_843f558564bc79ec26e3b7a353c67efd.bindPopup(popup_ceaa74c436f9ee83d499523795cac738)
+        ;
+
+        
+    
+    
+            var marker_8fbb1469b105d30f5070a159c05204b3 = L.marker(
+                [-21.1707997, -47.7219447],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_f9a561e352218fb990429f63d5563c42 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_8fbb1469b105d30f5070a159c05204b3.setIcon(icon_f9a561e352218fb990429f63d5563c42);
+        
+    
+        var popup_de84ce7127d290d14dfdafe67518cee8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e4c115fb49e9a0df7ccce6fd576c3ab0 = $(`<div id="html_e4c115fb49e9a0df7ccce6fd576c3ab0" style="width: 100.0%; height: 100.0%;">Tipo de Local: Area não Ocupada<br>Data: 2024-04-16 00:00:00<br>Lat: -21.1707997<br>Lng: -47.7219447</div>`)[0];
+                popup_de84ce7127d290d14dfdafe67518cee8.setContent(html_e4c115fb49e9a0df7ccce6fd576c3ab0);
+            
+        
+
+        marker_8fbb1469b105d30f5070a159c05204b3.bindPopup(popup_de84ce7127d290d14dfdafe67518cee8)
+        ;
+
+        
+    
+    
+            var marker_241c77830891a590f0ec42a0d5b243b7 = L.marker(
+                [-21.1983857769999, -47.759068664],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_65344cef8e9b7247e9f06e5f0ba674aa = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_241c77830891a590f0ec42a0d5b243b7.setIcon(icon_65344cef8e9b7247e9f06e5f0ba674aa);
+        
+    
+        var popup_d32e656f49f64640a0650d3c703cb209 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_83c33773e008a1f5194dfb404f7c1e5b = $(`<div id="html_83c33773e008a1f5194dfb404f7c1e5b" style="width: 100.0%; height: 100.0%;">Tipo de Local: Via Pública<br>Data: 2024-04-16 00:00:00<br>Lat: -21.1983857769999<br>Lng: -47.759068664</div>`)[0];
+                popup_d32e656f49f64640a0650d3c703cb209.setContent(html_83c33773e008a1f5194dfb404f7c1e5b);
+            
+        
+
+        marker_241c77830891a590f0ec42a0d5b243b7.bindPopup(popup_d32e656f49f64640a0650d3c703cb209)
+        ;
+
+        
+    
+    
+            var marker_4151698d44157f2d6e5c58265fd0115a = L.marker(
+                [-21.1751066783076, -47.7934903525384],
+                {}
+            ).addTo(marker_cluster_41274af0c87c2f199fc00b84638f1101);
+        
+    
+            var icon_02dcc2eed7f78a7a8a5ca32ba5e2ef24 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_4151698d44157f2d6e5c58265fd0115a.setIcon(icon_02dcc2eed7f78a7a8a5ca32ba5e2ef24);
+        
+    
+        var popup_bde7613d2f3730557a782b45b83733dc = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_bca1db3e2fd46a04ab7cce055d3b81d0 = $(`<div id="html_bca1db3e2fd46a04ab7cce055d3b81d0" style="width: 100.0%; height: 100.0%;">Tipo de Local: Via Pública<br>Data: 2024-04-23 00:00:00<br>Lat: -21.1751066783076<br>Lng: -47.7934903525384</div>`)[0];
+                popup_bde7613d2f3730557a782b45b83733dc.setContent(html_bca1db3e2fd46a04ab7cce055d3b81d0);
+            
+        
+
+        marker_4151698d44157f2d6e5c58265fd0115a.bindPopup(popup_bde7613d2f3730557a782b45b83733dc)
+        ;
+
+        
+    
+    
+            marker_cluster_41274af0c87c2f199fc00b84638f1101.addTo(map_a7352adc8cf7260d2c3deac39ff8237f);
+        
+</script>
+</html>

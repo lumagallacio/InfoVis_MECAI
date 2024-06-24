@@ -3,5 +3,4 @@
 Para iniciar o app no stramlit, faça
 ```
 streamlit run app_streamlit/main.py 
-
 ```

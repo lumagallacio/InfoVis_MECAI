@@ -1,0 +1,14 @@
+faicons==0.2.2
+folium==0.16.0
+geopy==2.4.1
+matplotlib==3.8.0
+pandas==2.2.2
+plotly==5.22.0
+polars==0.20.31
+seaborn==0.13.2
+shiny==0.10.2
+shinywidgets==0.3.2
+squarify==0.4.3
+streamlit==1.36.0
+streamlit_folium==0.20.1
+streamlit_option_menu==0.3.13

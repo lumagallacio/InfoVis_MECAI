@@ -1,3 +1,4 @@
 app/__pycache__/*
 .vscode/PythonImportHelper-v2-Completion.json
 app_streamlit/__pycache__/*
+dash/__pycache__/*

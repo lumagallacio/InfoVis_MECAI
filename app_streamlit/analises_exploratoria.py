@@ -34,7 +34,7 @@ def valores_nulos():
 
     - **BAIRRO** teve baixo percentual de valores ausentes (0.56%), logo foi usado para categorizar os dados.
 
-    - **HORA_OCORRENCIA** Devido ao alto percentual de valores ausentes (52.57%) a coluna com a hora da ocorrência foi gerada a partir da coluna DATA_COMUNICACAO_BO, que não possui valores ausentes. Isso garantiu que a análise temporal fosse realizada.
+    - **HORA_OCORRENCIA** Mesmo com um valor de ausentes de 52.57% a coluna com a hora da ocorrência foi utilizada para a análise de horário de ocorrência dos crimes.
 
     Portanto, a análise exploratória revelou uma quantidade significativa de valores ausentes em diversas colunas. No entanto, com o uso estratégico de colunas alternativas e essenciais como LATITUDE, LONGITUDE, BAIRRO e DATA_COMUNICACAO_BO, foi possível realizar as análises.
     """)

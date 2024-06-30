@@ -6,8 +6,7 @@ def switch_page(page_name):
 
 # Check if the session state has a page set, otherwise default to 'home'
 if "current_page" not in st.session_state:
-    st.session_state["current_page"] = "analises"
-    # st.session_state["current_page"] = "home"
+    st.session_state["current_page"] = "home"
 
 # Sidebar for navigation
 st.sidebar.title("Menu")

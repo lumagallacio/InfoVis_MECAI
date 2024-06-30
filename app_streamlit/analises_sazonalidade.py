@@ -13,7 +13,7 @@ def app():
                 """)
 
          
-    html_file_path = "/media/luma/hd1t3/Mestrado/Disciplinas/InfoVis/InfoVis_MECAI/results/parallel_categories_rp_celular_2023.html"
+    html_file_path = "results/parallel_categories_rp_celular_2023.html"
 
     with open(html_file_path, 'r', encoding='utf-8') as f:
         html_content = f.read()
@@ -36,7 +36,7 @@ def app():
     st.markdown("""
                 ### Tendência Acumulada de Ocorrências por Tipo e Mês
                 """)
-    html_file_path = "/media/luma/hd1t3/Mestrado/Disciplinas/InfoVis/InfoVis_MECAI/results/plot_trends.html"
+    html_file_path = "results/plot_trends.html"
     with open(html_file_path, 'r', encoding='utf-8') as f:
         html_content = f.read()
         components.html(html_content, height=600, width=900)
@@ -57,7 +57,7 @@ def app():
                 #### Distribuição de Crimes por Hora do Dia (Polar Bar Chart)
         O Polar Bar Chart mostra a distribuição das ocorrências de crimes por hora do dia em toda a cidade. A análise revela que as ocorrências de crimes são significativamente mais altas entre as 18:00 e 22:00 horas, com um pico por volta das 20:00 horas.
                 """)
-    html_file_path = "/media/luma/hd1t3/Mestrado/Disciplinas/InfoVis/InfoVis_MECAI/results/polar_bar.html"
+    html_file_path = "results/polar_bar.html"
     with open(html_file_path, 'r', encoding='utf-8') as f:
         html_content = f.read()
         components.html(html_content, height=600, width=700)
@@ -69,7 +69,7 @@ def app():
     st.markdown("""
             #### Ocorrências por Bairro e Período
             """)
-    html_file_path = "/media/luma/hd1t3/Mestrado/Disciplinas/InfoVis/InfoVis_MECAI/results/bairro_periodo.html"
+    html_file_path = "results/bairro_periodo.html"
     with open(html_file_path, 'r', encoding='utf-8') as f:
         html_content = f.read()
         components.html(html_content, height=400, width=700)

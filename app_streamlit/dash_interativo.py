@@ -12,7 +12,7 @@ import seaborn as sns
 from folium.plugins import HeatMap, MarkerCluster, Fullscreen
 from streamlit_folium import st_folium
 
-caminho_bases = Path('/media/luma/hd1t3/Mestrado/Disciplinas/InfoVis/InfoVis_MECAI/data')
+caminho_bases = Path('data')
 celulares_csv = caminho_bases.joinpath("CelularesSubtraidos_2023_2024_rp.csv")
 valores_na = ["NULL", "NA", "N/A", "NaN"]
 meses = {
@@ -83,10 +83,10 @@ def gera_heatmap(data):
 
 def carrega_heatmap(ano):
     if ano=='Geral':
-        html_file_path = f"/media/luma/hd1t3/Mestrado/Disciplinas/InfoVis/InfoVis_MECAI/results/heatmap_rp_celular_2023_e_2024.html"
+        html_file_path = f"results/heatmap_rp_celular_2023_e_2024.html"
         
     else:
-        html_file_path = f"/media/luma/hd1t3/Mestrado/Disciplinas/InfoVis/InfoVis_MECAI/results/heatmap_rp_celular_{ano}.html"
+        html_file_path = f"results/heatmap_rp_celular_{ano}.html"
     
     with open(html_file_path, 'r', encoding='utf-8') as f:
         html_content = f.read()

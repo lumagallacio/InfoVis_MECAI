@@ -11,41 +11,41 @@ df_bairros = pd.DataFrame(data)
 
 def analise_bairro_centro():
     st.markdown("###  Hotspots no Centro")
-    st.image("/media/luma/hd1t3/Mestrado/Disciplinas/InfoVis/InfoVis_MECAI/results/centro.png", width=600)
+    st.image("results/centro.png", width=600)
     st.markdown("""- **Rodoviaria**: Observamos 46 ocorrências, é um local de grande movimento e concentração de pessoas, o que torna o ambiente propício para a ocorrência de roubos/furtos de celulares. Normalmente tem aglomeração de passageiros que estão muitas vezes distraídos, carregando bagagens e preocupados com horários. 
         """)
 
     left_co, cent_co,_ = st.columns((1, 5, 3))
     with cent_co:
-        st.image("/media/luma/hd1t3/Mestrado/Disciplinas/InfoVis/InfoVis_MECAI/results/rodoviaria_street.png", width=600)
+        st.image("results/rodoviaria_street.png", width=600)
 
     st.markdown("""
         - **Região próxima à Cerqueira cesar**: É uma regiões com pontos de ônibus e grande tráfego de pessoas em horário de pico.
         """)
     left_co, cent_co,_ = st.columns((1, 5, 3))
     with cent_co:
-        st.image("/media/luma/hd1t3/Mestrado/Disciplinas/InfoVis/InfoVis_MECAI/results/cerqueira_onibus.png", width=600)
+        st.image("results/cerqueira_onibus.png", width=600)
 
     st.markdown("""
         - Além disso, notamos um hotspot com 18 ocorrências na região em frente ao prédio que antes abrigava a prefeitura da cidade e agora sedia a Secretaria Municipal de Cultura e Turismo de Ribeirão Preto. O local fica pouco iluminado à noite.
         """)
     left_co, cent_co,_ = st.columns((1, 5, 3))
     with cent_co:
-        st.image("/media/luma/hd1t3/Mestrado/Disciplinas/InfoVis/InfoVis_MECAI/results/cerqueria_praca.png", width=600)
+        st.image("results/cerqueria_praca.png", width=600)
 
     st.markdown("""
         - **Praça XV de Novembro e Catedral**: Na região das praças, com em torno de 20 ocorrências, existem muitos pontos de ônibus e grande tráfego de pessoas.
         """)
     left_co, cent_co,_ = st.columns((1, 5, 3))
     with cent_co:
-        st.image("/media/luma/hd1t3/Mestrado/Disciplinas/InfoVis/InfoVis_MECAI/results/catedral.png", width=600)
+        st.image("results/catedral.png", width=600)
 
     st.markdown("""
         - **Avenida Jerônimo Gonçalves com Francisco Junqueira**: São avenidas muito movimentadas na cidade, notamos 63 ocorrência nessa esquina.
         """)
     left_co, cent_co,_ = st.columns((1, 5, 3))
     with cent_co:
-        st.image("/media/luma/hd1t3/Mestrado/Disciplinas/InfoVis/InfoVis_MECAI/results/jeronimo.png", width=600)
+        st.image("results/jeronimo.png", width=600)
 
 def analise_bairro_joquei():
     st.markdown("###  Grande Hotspot no JD JÓQUEI CLUBE")
@@ -54,10 +54,10 @@ def analise_bairro_joquei():
 
     left_co, cent_co,_ = st.columns((1, 5, 3))
     with cent_co:
-        st.image("/media/luma/hd1t3/Mestrado/Disciplinas/InfoVis/InfoVis_MECAI/results/joquei.png", width=600)
+        st.image("results/joquei.png", width=600)
     left_co, cent_co,_ = st.columns((1, 5, 3))
     with cent_co:
-        st.image("/media/luma/hd1t3/Mestrado/Disciplinas/InfoVis/InfoVis_MECAI/results/parque_exp.png", width=600)
+        st.image("results/parque_exp.png", width=600)
 
 def app():
 
@@ -67,7 +67,7 @@ def app():
         ####  Tipos de Locais com mais ocorrências 
          Observamos que a grande maioria dos furtos e roubos ocorre em vias públicas, representando 83,97% dos casos (4014 ocorrências). Locais residenciais ocupam a segunda posição, mas com uma proporção significativamente menor, contabilizando apenas 4,10% (196 ocorrências). Isso mostra que a segurança em vias públicas é uma área crítica que necessita de atenção, pois concentra a maior parte dos crimes. 
                 """)
-    html_file_path = "/media/luma/hd1t3/Mestrado/Disciplinas/InfoVis/InfoVis_MECAI/results/tipo_local.html"
+    html_file_path = "results/tipo_local.html"
     with open(html_file_path, 'r', encoding='utf-8') as f:
         html_content = f.read()
         components.html(html_content, height=400, width=600)
@@ -78,7 +78,7 @@ def app():
     """)
     # st.dataframe(df_bairros.set_index(df_bairros.columns[0]))
 
-    html_file_path = "/media/luma/hd1t3/Mestrado/Disciplinas/InfoVis/InfoVis_MECAI/results/treemap.html"
+    html_file_path = "results/treemap.html"
     with open(html_file_path, 'r', encoding='utf-8') as f:
         html_content = f.read()
         components.html(html_content, height=400, width=800)
@@ -88,7 +88,7 @@ def app():
         O objetivo foi gerar um mapa interativo que visualiza a distribuição espacial dos crimes de roubo de celulares registrados em 2023, utilizando as técnicas de heatmap e cluster.
                 """)
     
-    html_file_path = "/media/luma/hd1t3/Mestrado/Disciplinas/InfoVis/InfoVis_MECAI/results/heatmap_rp_celular_2023.html"
+    html_file_path = "results/heatmap_rp_celular_2023.html"
     with open(html_file_path, 'r', encoding='utf-8') as f:
         html_content = f.read()
         components.html(html_content, height=550, width=800)
@@ -129,7 +129,7 @@ def app():
     O HeatMap gerado pela KDE revelou duas áreas de alta densidade de incidentes de crimes, identificando os hotspots. 
     """)
 
-    html_file_path = "/media/luma/hd1t3/Mestrado/Disciplinas/InfoVis/InfoVis_MECAI/results/kde_plot.html"
+    html_file_path = "results/kde_plot.html"
     with open(html_file_path, 'r', encoding='utf-8') as f:
         html_content = f.read()
         components.html(html_content, height=550, width=800)
@@ -139,7 +139,7 @@ def app():
     """)
     left_co, cent_co,_ = st.columns((1, 5, 3))
     with cent_co:
-        st.image("/media/luma/hd1t3/Mestrado/Disciplinas/InfoVis/InfoVis_MECAI/results/hot_spot_kde.png", width=600)
+        st.image("results/hot_spot_kde.png", width=600)
 
 
 if __name__ == "__main__":

@@ -17,7 +17,7 @@ def app():
         options=["Análise Exploratória",  "Locais com Alta Incidência", "Analise de Sazonalidade"],
         icons=["bar-chart", "exclamation-triangle", "calendar-date"],
         menu_icon="cast",
-        default_index=1,
+        default_index=0,
         orientation="horizontal",
         styles={
             "container": {"padding": "5px", "background-color": "rgb(14, 17, 23)"},

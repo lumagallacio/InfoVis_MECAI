@@ -41,7 +41,7 @@ def valores_nulos():
     
     st.markdown("#### Percentual de Valores Ausentes por Coluna")
 
-    html_file_path = "/media/luma/hd1t3/Mestrado/Disciplinas/InfoVis/InfoVis_MECAI/results/percentual_valores_ausentes.html"
+    html_file_path = "results/percentual_valores_ausentes.html"
     with open(html_file_path, 'r', encoding='utf-8') as f:
         html_content = f.read()
         components.html(html_content, height=400, width=800)
@@ -56,7 +56,7 @@ def app():
     valores_nulos()
     
              
-    html_file_path = "/media/luma/hd1t3/Mestrado/Disciplinas/InfoVis/InfoVis_MECAI/results/tipo.html"
+    html_file_path = "results/tipo.html"
     with open(html_file_path, 'r', encoding='utf-8') as f:
         html_content = f.read()
         components.html(html_content, height=400, width=600)
@@ -67,7 +67,7 @@ def app():
     Para a análise de correlação, foram selecionadas colunas numéricas essenciais: LATITUDE, LONGITUDE, MES_COMUNICACAO, DIA_COMUNICACAO, MES_OCORRENCIA e DIA_OCORRENCIA. A matriz de correlação foi calculada com o método de correlação de Pearson com objetivo de investigar possíveis relações entre essas variáveis. A escala de correlação varia de -1 a 1, onde valores próximos a 1 indicam uma correlação positiva forte, valores próximos a -1 indicam uma correlação negativa forte, e valores próximos a 0 indicam pouca ou nenhuma correlação significativa.
     """)
     
-    html_file_path = "/media/luma/hd1t3/Mestrado/Disciplinas/InfoVis/InfoVis_MECAI/results/matriz_correlacao.html"
+    html_file_path = "results/matriz_correlacao.html"
     with open(html_file_path, 'r', encoding='utf-8') as f:
         html_content = f.read()
         components.html(html_content, height=500, width=800)
@@ -87,7 +87,7 @@ def app():
     ### Marcas com mais ocorrências
     Vimos que no contexto de furto e roubo de celulares as marcas Samsung e Apple tem mais ocorrências, com aproximadamente 40% e 25% dos casos, respectivamente. Sabemos que há predominância das marcas Samsung e Apple na população dado sua popularidade. 
     """)
-    html_file_path = "/media/luma/hd1t3/Mestrado/Disciplinas/InfoVis/InfoVis_MECAI/results/marca.html"
+    html_file_path = "results/marca.html"
     with open(html_file_path, 'r', encoding='utf-8') as f:
         html_content = f.read()
         components.html(html_content, height=500, width=600)

@@ -132,7 +132,7 @@ def app():
     html_file_path = "results/kde_plot.html"
     with open(html_file_path, 'r', encoding='utf-8') as f:
         html_content = f.read()
-        components.html(html_content, height=550, width=800)
+        components.html(html_content, height=600, width=800)
         
     st.markdown("""
     Para identificar as regiões correspondentes no mapa, criamos polígonos para representar os hotspots de maior concentração de incidentes. O hotspot maior, indicado por um polígono roxo, abrange a região de latitude -21.19 a -21.16 e longitude -47.82 a -47.80. O hotspot menor, representado por um polígono verde, cobre as coordenadas de latitude -21.16 a -21.13 e longitude -47.76 a -47.78. O polígono roco corresponde ao bairro CENTRO e um pouco de CAMPOS ELISEOS e o verde corresponde ao JD JOQUEI CLUBE.

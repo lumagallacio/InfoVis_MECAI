@@ -9,8 +9,8 @@ integrantes = [
         "foto": "integrantes/luma.jpeg"
     },
     {
-        "nome": "Michelangelo",
-        "email": "email2@example.com",
+        "nome": "Michelangelo Redondo dos Anjos",
+        "email": "mranjos@usp.br",
         "responsabilidade": "Análises Exploratória, Dashboard interativo, Relatório",
         "foto": "integrantes/luma.jpeg"
     },

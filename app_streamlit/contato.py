@@ -12,13 +12,13 @@ integrantes = [
         "nome": "Michelangelo Redondo dos Anjos",
         "email": "mranjos@usp.br",
         "responsabilidade": "Análises Exploratória, Dashboard interativo, Relatório",
-        "foto": "integrantes/luma.jpeg"
+        "foto": "integrantes/mika.jpeg"
     },
     {
         "nome": "Armando",
-        "email": "email3@example.com",
+        "email": "armandoneto.dias@usp.br",
         "responsabilidade": "Análises de Sazonalidade, Apresentação, Vídeo",
-        "foto": "integrantes/luma.jpeg"
+        "foto": "integrantes/armando.jpeg"
     }
 ]
 

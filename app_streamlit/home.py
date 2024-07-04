@@ -3,8 +3,14 @@ import streamlit as st
 def app():
 
     # Introduction and Objectives
-    st.title("Análise de Segurança Pública em Ribeirão Preto")
+    st.title("Análise de Roubos e Furtos de Celular em Ribeirão Preto")
 
+    st.subheader("Apresentação")
+    # URL do vídeo do YouTube
+    video_url = "https://youtu.be/YvU15o5V15w"
+
+    # Exibe o vídeo no Streamlit
+    st.video(video_url)
     st.write("""
     ## Introdução
     A segurança pública é uma preocupação fundamental para qualquer sociedade. No presente trabalho estudamos a cidade de Ribeirão Preto, nos anos de 2023 e 2024.

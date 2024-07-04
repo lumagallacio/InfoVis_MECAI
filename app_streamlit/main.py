@@ -1,5 +1,16 @@
 import streamlit as st
 import pandas as pd
+from streamlit.components.v1 import html
+
+def open_page(url):
+    open_script = """
+        <script type="text/javascript">
+            window.open('%s', '_blank').focus();
+        </script>
+    """ % (url)
+    html(open_script)
+
+
 # Function to switch pages
 def switch_page(page_name):
     st.session_state["current_page"] = page_name
@@ -16,10 +27,14 @@ if st.sidebar.button("Dados"):
     switch_page("dados")
 if st.sidebar.button("Análises de Celulares"):
     switch_page("analises")
-if st.sidebar.button("Dashboard Interativo"):
+# if st.sidebar.button("Dashboard Interativo"):
+if st.sidebar.button('Dashboard Interativo', on_click=open_page, args=("https://mecai.shinyapps.io/seg-publica/",)):
     switch_page("dash_interativo")
+
 if st.sidebar.button("Contato"):
     switch_page("contato")
+
+
 
 # Display the current page
 if st.session_state["current_page"] == "home":
@@ -35,9 +50,6 @@ elif st.session_state["current_page"] == "dash_interativo":
     # import dash_interativo as DashInterativo
     # DashInterativo.app()
     st.write("Redirecionando para o Dash Interativo...")
-
-    import webbrowser
-    webbrowser.open_new_tab('https://mecai.shinyapps.io/seg-publica/')
 
 elif st.session_state["current_page"] == "contato":
     import contato as Contato

@@ -2,14 +2,6 @@ import streamlit as st
 import pandas as pd
 from streamlit.components.v1 import html
 
-def open_page(url):
-    open_script = """
-        <script type="text/javascript">
-            window.open('%s', '_blank').focus();
-        </script>
-    """ % (url)
-    html(open_script)
-
 
 # Function to switch pages
 def switch_page(page_name):
@@ -19,6 +11,13 @@ def switch_page(page_name):
 if "current_page" not in st.session_state:
     st.session_state["current_page"] = "home"
 
+import streamlit.components.v1 as components
+
+def redirect_to_link(url):
+    st.write(f'<meta http-equiv="refresh" content="0; url={url}">', unsafe_allow_html=True)
+
+
+
 # Sidebar for navigation
 st.sidebar.title("Menu")
 if st.sidebar.button("Introdução"):
@@ -27,9 +26,10 @@ if st.sidebar.button("Dados"):
     switch_page("dados")
 if st.sidebar.button("Análises de Celulares"):
     switch_page("analises")
-# if st.sidebar.button("Dashboard Interativo"):
-if st.sidebar.button('Dashboard Interativo', on_click=open_page, args=("https://mecai.shinyapps.io/seg-publica/",)):
-    switch_page("dash_interativo")
+if st.sidebar.button("Dashboard Interativo"):
+    # switch_page("dash_interativo")
+
+    redirect_to_link("https://mecai.shinyapps.io/seg-publica/")
 
 if st.sidebar.button("Contato"):
     switch_page("contato")

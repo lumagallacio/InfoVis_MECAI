@@ -15,7 +15,7 @@ integrantes = [
         "foto": "integrantes/mika.jpeg"
     },
     {
-        "nome": "Armando",
+        "nome": "Armando Augusto Dias Neto",
         "email": "armandoneto.dias@usp.br",
         "responsabilidade": "Análises de Sazonalidade, Apresentação, Vídeo",
         "foto": "integrantes/armando.jpeg"
